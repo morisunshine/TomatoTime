@@ -12,5 +12,8 @@
 
 @property (nonatomic, retain) UIView *totoalView;
 @property (nonatomic, retain) UIView *progressView;
+@property (nonatomic, retain) UILabel *countLabel;
+
+- (void)oneSecondAnimationsWithLeft:(BOOL)left;
 
 @end

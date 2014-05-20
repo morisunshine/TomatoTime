@@ -26,6 +26,7 @@
     circleView.titleString = @"开始";
     
     TTProgressView *progressView = [[TTProgressView alloc] initWithFrame:CGRectMake(72, 300, 175, 2)];
+    [progressView oneSecondAnimationsWithLeft:YES];
     
     [self.view addSubview:circleView];
     [self.view addSubview:progressView];
