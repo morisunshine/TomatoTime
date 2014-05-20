@@ -21,6 +21,7 @@
 		08909CA019225D7D0070A3B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C8219225D7D0070A3B4 /* UIKit.framework */; };
 		08909CA819225D7D0070A3B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08909CA619225D7D0070A3B4 /* InfoPlist.strings */; };
 		08909CAA19225D7D0070A3B4 /* TomatoTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08909CA919225D7D0070A3B4 /* TomatoTimeTests.m */; };
+		08909CB71922627F0070A3B4 /* TTCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08909CB61922627F0070A3B4 /* TTCircleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,16 @@
 		08909C8D19225D7D0070A3B4 /* TTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAppDelegate.h; sourceTree = "<group>"; };
 		08909C8E19225D7D0070A3B4 /* TTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAppDelegate.m; sourceTree = "<group>"; };
 		08909C9119225D7D0070A3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		08909C9319225D7D0070A3B4 /* TTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTViewController.h; sourceTree = "<group>"; };
-		08909C9419225D7D0070A3B4 /* TTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTViewController.m; sourceTree = "<group>"; };
+		08909C9319225D7D0070A3B4 /* TTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTViewController.h; path = ../TTViewController.h; sourceTree = "<group>"; };
+		08909C9419225D7D0070A3B4 /* TTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTViewController.m; path = ../TTViewController.m; sourceTree = "<group>"; };
 		08909C9619225D7D0070A3B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		08909C9C19225D7D0070A3B4 /* TomatoTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08909C9D19225D7D0070A3B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		08909CA519225D7D0070A3B4 /* TomatoTimeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TomatoTimeTests-Info.plist"; sourceTree = "<group>"; };
 		08909CA719225D7D0070A3B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08909CA919225D7D0070A3B4 /* TomatoTimeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TomatoTimeTests.m; sourceTree = "<group>"; };
+		08909CB51922627F0070A3B4 /* TTCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCircleView.h; sourceTree = "<group>"; };
+		08909CB61922627F0070A3B4 /* TTCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCircleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +115,11 @@
 		08909C8419225D7D0070A3B4 /* TomatoTime */ = {
 			isa = PBXGroup;
 			children = (
+				08909CB3192262730070A3B4 /* View */,
+				08909CB4192262730070A3B4 /* ViewController */,
 				08909C8D19225D7D0070A3B4 /* TTAppDelegate.h */,
 				08909C8E19225D7D0070A3B4 /* TTAppDelegate.m */,
 				08909C9019225D7D0070A3B4 /* Main.storyboard */,
-				08909C9319225D7D0070A3B4 /* TTViewController.h */,
-				08909C9419225D7D0070A3B4 /* TTViewController.m */,
 				08909C9619225D7D0070A3B4 /* Images.xcassets */,
 				08909C8519225D7D0070A3B4 /* Supporting Files */,
 			);
@@ -150,6 +153,24 @@
 				08909CA619225D7D0070A3B4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08909CB3192262730070A3B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08909CB51922627F0070A3B4 /* TTCircleView.h */,
+				08909CB61922627F0070A3B4 /* TTCircleView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08909CB4192262730070A3B4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				08909C9319225D7D0070A3B4 /* TTViewController.h */,
+				08909C9419225D7D0070A3B4 /* TTViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +273,7 @@
 			files = (
 				08909C8F19225D7D0070A3B4 /* TTAppDelegate.m in Sources */,
 				08909C8B19225D7D0070A3B4 /* main.m in Sources */,
+				08909CB71922627F0070A3B4 /* TTCircleView.m in Sources */,
 				08909C9519225D7D0070A3B4 /* TTViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
