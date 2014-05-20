@@ -12,11 +12,13 @@
 {
     CAShapeLayer *_trackLayer;
     UIBezierPath *_trackPath;
+    UILabel *_titleLabel;
 }
 
 @property (nonatomic, retain) CAShapeLayer *progressLayer;
 @property (nonatomic, retain) UIBezierPath *progressPath;
 
 @property (nonatomic, assign) UIColor *circleColor;
+@property (nonatomic, retain) NSString *titleString;
 
 @end
