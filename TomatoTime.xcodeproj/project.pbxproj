@@ -14,7 +14,7 @@
 		08909C8B19225D7D0070A3B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08909C8A19225D7D0070A3B4 /* main.m */; };
 		08909C8F19225D7D0070A3B4 /* TTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08909C8E19225D7D0070A3B4 /* TTAppDelegate.m */; };
 		08909C9219225D7D0070A3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08909C9019225D7D0070A3B4 /* Main.storyboard */; };
-		08909C9519225D7D0070A3B4 /* TTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08909C9419225D7D0070A3B4 /* TTViewController.m */; };
+		08909C9519225D7D0070A3B4 /* TTTomatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08909C9419225D7D0070A3B4 /* TTTomatoViewController.m */; };
 		08909C9719225D7D0070A3B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08909C9619225D7D0070A3B4 /* Images.xcassets */; };
 		08909C9E19225D7D0070A3B4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C9D19225D7D0070A3B4 /* XCTest.framework */; };
 		08909C9F19225D7D0070A3B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C7E19225D7D0070A3B4 /* Foundation.framework */; };
@@ -49,8 +49,8 @@
 		08909C8D19225D7D0070A3B4 /* TTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAppDelegate.h; sourceTree = "<group>"; };
 		08909C8E19225D7D0070A3B4 /* TTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAppDelegate.m; sourceTree = "<group>"; };
 		08909C9119225D7D0070A3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		08909C9319225D7D0070A3B4 /* TTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTViewController.h; path = ../TTViewController.h; sourceTree = "<group>"; };
-		08909C9419225D7D0070A3B4 /* TTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTViewController.m; path = ../TTViewController.m; sourceTree = "<group>"; };
+		08909C9319225D7D0070A3B4 /* TTTomatoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTTomatoViewController.h; path = ../TTTomatoViewController.h; sourceTree = "<group>"; };
+		08909C9419225D7D0070A3B4 /* TTTomatoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTTomatoViewController.m; path = ../TTTomatoViewController.m; sourceTree = "<group>"; };
 		08909C9619225D7D0070A3B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		08909C9C19225D7D0070A3B4 /* TomatoTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08909C9D19225D7D0070A3B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -178,8 +178,8 @@
 		08909CB4192262730070A3B4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				08909C9319225D7D0070A3B4 /* TTViewController.h */,
-				08909C9419225D7D0070A3B4 /* TTViewController.m */,
+				08909C9319225D7D0070A3B4 /* TTTomatoViewController.h */,
+				08909C9419225D7D0070A3B4 /* TTTomatoViewController.m */,
 				08EB7F73192CDEDE00B8A110 /* TTBaseViewController.h */,
 				08EB7F74192CDEDE00B8A110 /* TTBaseViewController.m */,
 				08EB7F76192CE12300B8A110 /* TTStartViewController.h */,
@@ -291,7 +291,7 @@
 				08909CB71922627F0070A3B4 /* TTCircleView.m in Sources */,
 				08EB7F75192CDEDE00B8A110 /* TTBaseViewController.m in Sources */,
 				08EB7F72192B9BDE00B8A110 /* TTProgressView.m in Sources */,
-				08909C9519225D7D0070A3B4 /* TTViewController.m in Sources */,
+				08909C9519225D7D0070A3B4 /* TTTomatoViewController.m in Sources */,
 				08EB7F78192CE12300B8A110 /* TTStartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

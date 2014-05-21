@@ -17,7 +17,7 @@ NSInteger const kCircleLineWidth = 4;
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1];
     }
     return self;
 }
@@ -32,7 +32,7 @@ NSInteger const kCircleLineWidth = 4;
         _trackLayer = [CAShapeLayer layer];
         _trackLayer.frame = self.bounds;
         [self.layer addSublayer:_trackLayer];
-        _trackLayer.fillColor = [UIColor clearColor].CGColor;
+        _trackLayer.fillColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1].CGColor;
         if (self.circleColor) {
             _trackLayer.strokeColor = self.circleColor.CGColor;
         } else {

@@ -9,6 +9,7 @@
 #import "TTStartViewController.h"
 #import "TTProgressView.h"
 #import "TTCircleView.h"
+#import "TTTomatoViewController.h"
 
 @interface TTStartViewController ()
 
@@ -48,10 +49,13 @@
 - (TTCircleView *)circleView
 {
     if (!_circleView) {
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(startToTomato:)];
         _circleView = [[TTCircleView alloc] initWithFrame:CGRectMake(0, 100, 150, 150)];
         _circleView.center = CGPointMake(self.view.center.x, _circleView.center.y);
         _circleView.circleColor = [UIColor colorWithRed:0.87 green:0.32 blue:0.24 alpha:1];
         _circleView.titleString = @"开始";
+        _circleView.userInteractionEnabled = YES;
+        [_circleView addGestureRecognizer:tapGestureRecognizer];
     }
     
     return _circleView;
@@ -73,15 +77,20 @@
     return _textLabel;
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Actions -
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (IBAction)startToTomato:(UITapGestureRecognizer *)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    CATransition *transition=[CATransition animation];
+    transition.timingFunction = UIViewAnimationTransitionNone;
+    transition.duration=0.4;
+    transition.type=kCATransitionFade;
+    transition.subtype=kCATransitionFade;
+    
+    TTTomatoViewController *startViewController = [[TTTomatoViewController alloc] init];
+    [startViewController.view.layer addAnimation:transition forKey:nil];
+    
+    [self.navigationController pushViewController:startViewController animated:NO];
 }
-*/
 
 @end

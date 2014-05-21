@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TTViewController : UIViewController
+@interface TTTomatoViewController : UIViewController
 
 @end
