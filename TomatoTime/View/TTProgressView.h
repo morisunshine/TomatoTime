@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface TTProgressView : UIView
+{
+    NSTimer *_timer;
+}
 
 @property (nonatomic, retain) UIView *totoalView;
 @property (nonatomic, retain) UIView *progressView;

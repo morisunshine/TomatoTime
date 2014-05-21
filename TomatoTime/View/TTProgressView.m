@@ -18,6 +18,10 @@
         [self addSubview:self.countLabel];
         [self addSubview:self.totoalView];
         [self addSubview:self.progressView];
+        _timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(updateCountLabel) userInfo:nil repeats:YES];
+        NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+        [runloop addTimer:_timer forMode:NSDefaultRunLoopMode];
+        [_timer fire];
     }
     return self;
 }
@@ -29,7 +33,7 @@
     if (!_countLabel) {
         _countLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 12, 12)];
         _countLabel.text = @"1";
-        _countLabel.textAlignment = NSTextAlignmentCenter;
+        _countLabel.textAlignment = NSTextAlignmentLeft;
         _countLabel.textColor = [UIColor colorWithRed:0.71 green:0.71 blue:0.71 alpha:1];
         _countLabel.font = [UIFont boldSystemFontOfSize:16];
     }
@@ -65,11 +69,23 @@
 {
     if (left) {
         [UIView animateWithDuration:60 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-            self.countLabel.frame = CGRectMake(CGRectGetWidth(self.bounds) - 12, 0, 12, 12);
+            self.countLabel.frame = CGRectMake(CGRectGetWidth(self.bounds) - 12, 0, 20, 12);
             self.progressView.frame = CGRectMake(0, 14, CGRectGetWidth(self.bounds), 2);
         } completion:^(BOOL finished) {
             
         }];
+    }
+}
+
+- (void)updateCountLabel
+{
+    static NSInteger count = 0;
+    count++;
+    
+    self.countLabel.text = [NSString stringWithFormat:@"%i",count];
+    
+    if (count == 60) {
+        [_timer invalidate];
     }
 }
 
