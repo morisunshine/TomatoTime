@@ -20,16 +20,7 @@
 {
     [super viewDidLoad];
     
-    TTCircleView *circleView = [[TTCircleView alloc] initWithFrame:CGRectMake(0, 100, 150, 150)];
-    circleView.center = CGPointMake(self.view.center.x, circleView.center.y);
-    circleView.circleColor = [UIColor colorWithRed:0.87 green:0.32 blue:0.24 alpha:1];
-    circleView.titleString = @"开始";
     
-    TTProgressView *progressView = [[TTProgressView alloc] initWithFrame:CGRectMake(72, 300, 175, 2)];
-    [progressView oneSecondAnimationsWithLeft:YES];
-    
-    [self.view addSubview:circleView];
-    [self.view addSubview:progressView];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
