@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, TTCircleViewMode) {
+    TTCircleViewModeLine,      //有线的圆
+    TTCircleViewModeFill       //实体的圆
+};
+
 @interface TTCircleView : UIView
 {
     CAShapeLayer *_trackLayer;
@@ -15,10 +20,8 @@
     UILabel *_titleLabel;
 }
 
-@property (nonatomic, retain) CAShapeLayer *progressLayer;
-@property (nonatomic, retain) UIBezierPath *progressPath;
-
 @property (nonatomic, assign) UIColor *circleColor;
 @property (nonatomic, retain) NSString *titleString;
+@property (nonatomic) TTCircleViewMode circleMode;
 
 @end

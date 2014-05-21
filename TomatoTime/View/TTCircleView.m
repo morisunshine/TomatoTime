@@ -24,18 +24,33 @@ NSInteger const kCircleLineWidth = 4;
 
 - (void)willMoveToSuperview:(UIView *)newSuperview
 {
-    if (_trackLayer != nil) {
-        return;
-    }
-    
-    _trackLayer = [CAShapeLayer layer];
-    _trackLayer.frame = self.bounds;
-    [self.layer addSublayer:_trackLayer];
-    _trackLayer.fillColor = [UIColor clearColor].CGColor;
-    if (self.circleColor) {
-        _trackLayer.strokeColor = self.circleColor.CGColor;
+    if (TTCircleViewModeLine == self.circleMode) {
+        if (_trackLayer != nil) {
+            return;
+        }
+        
+        _trackLayer = [CAShapeLayer layer];
+        _trackLayer.frame = self.bounds;
+        [self.layer addSublayer:_trackLayer];
+        _trackLayer.fillColor = [UIColor clearColor].CGColor;
+        if (self.circleColor) {
+            _trackLayer.strokeColor = self.circleColor.CGColor;
+        } else {
+            _trackLayer.strokeColor = [UIColor redColor].CGColor;
+        }
+        
+        _trackLayer.contentsScale = [UIScreen mainScreen].scale;
+        _trackLayer.lineCap = kCALineCapRound;
+        _trackLayer.lineWidth = kCircleLineWidth;
+        CGFloat progressWidth = self.bounds.size.width;
+        CGFloat radius = progressWidth / 2 - kCircleLineWidth / 2;
+        
+        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2) radius:radius startAngle:(M_PI * -90 / 180) endAngle:(M_PI * 270 / 180) clockwise:YES];
+        _trackLayer.path = [path CGPath];
+        [self.layer addSublayer:_trackLayer];
     } else {
-        _trackLayer.strokeColor = [UIColor redColor].CGColor;
+        self.layer.backgroundColor = self.circleColor.CGColor;
+        self.layer.cornerRadius = self.bounds.size.width / 2;
     }
     
     if (!_titleLabel) {
@@ -49,16 +64,6 @@ NSInteger const kCircleLineWidth = 4;
     if (self.titleString) {
         _titleLabel.text = self.titleString;
     }
-    
-    _trackLayer.contentsScale = [UIScreen mainScreen].scale;
-    _trackLayer.lineCap = kCALineCapRound;
-    _trackLayer.lineWidth = kCircleLineWidth;
-    CGFloat progressWidth = self.bounds.size.width;
-    CGFloat radius = progressWidth / 2 - kCircleLineWidth / 2;
-    
-    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2) radius:radius startAngle:(M_PI * -90 / 180) endAngle:(M_PI * 270 / 180) clockwise:YES];
-    _trackLayer.path = [path CGPath];
-    [self.layer addSublayer:_trackLayer];
 }
 /*
 // Only override drawRect: if you perform custom drawing.
