@@ -13,6 +13,7 @@
 @interface TTTomatoViewController ()
 {
     NSTimer *timer_;
+    NSInteger minuteCount_;
 }
 
 @property (nonatomic, retain) TTCircleView *circleView;
@@ -26,9 +27,11 @@
 {
     [super viewDidLoad];
     
+    minuteCount_ = 26;
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.circleView];
     [self.view addSubview:self.progressView];
+    
     timer_ = [NSTimer timerWithTimeInterval:60 target:self selector:@selector(updateMinuteCount) userInfo:nil repeats:YES];
     NSRunLoop *runloop = [NSRunLoop currentRunLoop];
     [runloop addTimer:timer_ forMode:NSDefaultRunLoopMode];
@@ -49,6 +52,7 @@
     if (!_circleView) {
         _circleView = [[TTCircleView alloc] initWithFrame:CGRectMake(0, 100, 150, 150)];
         _circleView.circleMode = TTCircleViewModeFill;
+        _circleView.titleColor = [UIColor whiteColor];
         _circleView.center = CGPointMake(self.view.center.x, _circleView.center.y);
         _circleView.circleColor = [UIColor colorWithRed:0.87 green:0.32 blue:0.24 alpha:1];
         _circleView.userInteractionEnabled = YES;
@@ -72,10 +76,9 @@
 
 - (void)updateMinuteCount
 {
-    static NSInteger minuteCount = 0;
-    minuteCount ++;
-    self.circleView.titleString = [NSString stringWithFormat:@"%d", minuteCount];
-    if (minuteCount == 25) {
+    minuteCount_ --;
+    self.circleView.titleString = [NSString stringWithFormat:@"%d", minuteCount_];
+    if (minuteCount_ == 0) {
         [timer_ invalidate];
     }
 }

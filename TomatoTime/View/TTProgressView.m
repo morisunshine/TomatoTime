@@ -18,6 +18,7 @@
         [self addSubview:self.countLabel];
         [self addSubview:self.totoalView];
         [self addSubview:self.progressView];
+        
         _timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(updateCountLabel) userInfo:nil repeats:YES];
         NSRunLoop *runloop = [NSRunLoop currentRunLoop];
         [runloop addTimer:_timer forMode:NSDefaultRunLoopMode];
@@ -79,13 +80,16 @@
 
 - (void)updateCountLabel
 {
-    static NSInteger count = 0;
-    count++;
+    _count++;
     
-    self.countLabel.text = [NSString stringWithFormat:@"%i",count];
+    self.countLabel.text = [NSString stringWithFormat:@"%i",_count];
     
-    if (count == 60) {
-        [_timer invalidate];
+    if (_count == 60) {
+        _count = 0;
+        self.countLabel.text = [NSString stringWithFormat:@"%i", _count];
+        self.progressView.frame = CGRectMake(0, 14, 0, 2);
+        self.countLabel.frame = CGRectMake(0, 0, 12, 12);
+        [self oneSecondAnimationsWithLeft:YES];
     }
 }
 

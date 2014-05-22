@@ -56,8 +56,13 @@ NSInteger const kCircleLineWidth = 4;
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0 + CGRectGetHeight(self.bounds) / 2 - 20, CGRectGetWidth(self.bounds), 40)];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.font = [UIFont boldSystemFontOfSize:18];
-        _titleLabel.textColor = [UIColor colorWithRed:0.41 green:0.41 blue:0.41 alpha:1];
+        _titleLabel.font = [UIFont boldSystemFontOfSize:22];
+        if (self.titleColor) {
+            _titleLabel.textColor = self.titleColor;
+        } else {
+            _titleLabel.textColor = [UIColor colorWithRed:0.41 green:0.41 blue:0.41 alpha:1];
+        }
+        
         [self addSubview:_titleLabel];
     }
     

@@ -11,6 +11,7 @@
 @interface TTProgressView : UIView
 {
     NSTimer *_timer;
+    NSInteger _count;
 }
 
 @property (nonatomic, retain) UIView *totoalView;

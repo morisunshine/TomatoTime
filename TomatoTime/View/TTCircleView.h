@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, TTCircleViewMode) {
 
 @property (nonatomic, assign) UIColor *circleColor;
 @property (nonatomic, retain) NSString *titleString;
+@property (nonatomic, assign) UIColor *titleColor;
 @property (nonatomic) TTCircleViewMode circleMode;
 
 @end
