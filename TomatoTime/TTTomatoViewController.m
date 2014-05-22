@@ -11,6 +11,9 @@
 #import "TTProgressView.h"
 
 @interface TTTomatoViewController ()
+{
+    NSTimer *timer_;
+}
 
 @property (nonatomic, retain) TTCircleView *circleView;
 @property (nonatomic, retain) TTProgressView *progressView;
@@ -26,6 +29,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.circleView];
     [self.view addSubview:self.progressView];
+    timer_ = [NSTimer timerWithTimeInterval:60 target:self selector:@selector(updateMinuteCount) userInfo:nil repeats:YES];
+    NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+    [runloop addTimer:timer_ forMode:NSDefaultRunLoopMode];
+    [timer_ fire];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -59,6 +66,18 @@
     }
     
     return _progressView;
+}
+
+#pragma mark - Actions -
+
+- (void)updateMinuteCount
+{
+    static NSInteger minuteCount = 0;
+    minuteCount ++;
+    self.circleView.titleString = [NSString stringWithFormat:@"%d", minuteCount];
+    if (minuteCount == 25) {
+        [timer_ invalidate];
+    }
 }
 
 @end

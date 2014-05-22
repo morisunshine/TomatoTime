@@ -65,6 +65,15 @@ NSInteger const kCircleLineWidth = 4;
         _titleLabel.text = self.titleString;
     }
 }
+
+#pragma mark - Setters -
+
+- (void)setTitleString:(NSString *)titleString
+{
+    _titleString = titleString;
+    
+    _titleLabel.text = titleString;
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
