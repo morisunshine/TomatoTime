@@ -8,10 +8,12 @@
 
 #import "TTMainViewController.h"
 #import "TTStartMainView.h"
+#import "TTTomatoView.h"
 
 @interface TTMainViewController ()
 
 @property (nonatomic, retain) TTStartMainView *startMainView;
+@property (nonatomic, retain) TTTomatoView *tomatoView;
 
 @end
 
@@ -44,14 +46,27 @@
 
 - (TTStartMainView *)startMainView
 {
+    __weak TTMainViewController *weakSelf = self;
+    __weak TTStartMainView *weakStartMainView = _startMainView;
     if (!_startMainView) {
         _startMainView = [[TTStartMainView alloc] initWithFrame:self.view.bounds];
         _startMainView.handler = ^() {
             NSLog(@"Start!");
+            [weakSelf.view addSubview:weakSelf.tomatoView];
+            [weakStartMainView removeFromSuperview];
         };
     }
     
     return _startMainView;
+}
+
+- (TTTomatoView *)tomatoView
+{
+    if (!_tomatoView) {
+        _tomatoView = [[TTTomatoView alloc] initWithFrame:self.view.bounds];
+    }
+    
+    return _tomatoView;
 }
 
 @end

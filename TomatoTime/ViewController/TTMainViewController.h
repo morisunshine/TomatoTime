@@ -6,8 +6,6 @@
 //  Copyright (c) 2014年 Sheldon. All rights reserved.
 //
 
-#import "TTBaseViewController.h"
-
-@interface TTMainViewController : TTBaseViewController
+@interface TTMainViewController : UIViewController
 
 @end
