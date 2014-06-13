@@ -12,6 +12,17 @@
 
 @implementation TTTomatoView
 
+- (id)initWithFrame:(CGRect)frame maxMinute:(NSInteger)maxMinute
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        maxMinute_ = maxMinute;
+        [self setupView];
+    }
+    
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -26,8 +37,6 @@
 
 - (void)setupView
 {
-    minuteCount_ = 2;
-    
     [self addSubview:self.circleView];
     [self addSubview:self.progressView];
     
@@ -38,6 +47,13 @@
 }
 
 #pragma mark - Setters -
+
+- (void)setTitleString:(NSString *)titleString
+{
+    _titleString = titleString;
+    
+    self.circleView.titleString = titleString;
+}
 
 - (void)setCircleColor:(UIColor *)circleColor
 {
@@ -75,15 +91,26 @@
 
 - (void)updateMinuteCount
 {
-    minuteCount_ --;
+    maxMinute_ --;
     
-    self.circleView.titleString = [NSString stringWithFormat:@"%d", minuteCount_];
+    self.circleView.titleString = [NSString stringWithFormat:@"%d", maxMinute_];
     
-    if (minuteCount_ == 0) {
+    if (maxMinute_ == 0) {
         [timer_ invalidate];
         if (self.endHandler) {
             self.endHandler();
         }
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endTaped:)];
+        [self addGestureRecognizer:tapGestureRecognizer];
+    }
+}
+
+#pragma mark - Actions -
+
+- (IBAction)endTaped:(id)sender
+{
+    if (self.endTapHandler) {
+        self.endTapHandler();
     }
 }
 

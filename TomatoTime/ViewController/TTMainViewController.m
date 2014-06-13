@@ -63,12 +63,19 @@
 
 - (TTTomatoView *)tomatoView
 {
-    __weak TTTomatoView *weakTomatoView = _tomatoView;
     if (!_tomatoView) {
-        _tomatoView = [[TTTomatoView alloc] initWithFrame:self.view.bounds];
+        _tomatoView = [[TTTomatoView alloc] initWithFrame:self.view.bounds maxMinute:2];
+        
+        __weak TTTomatoView *weakTomatoView = _tomatoView;
+        __weak TTMainViewController *weakSelf = self;
+        
         _tomatoView.endHandler = ^() {
-            [weakTomatoView removeFromSuperview];
             NSLog(@"可以休息了！");
+            weakTomatoView.titleString = @"点击开始休息";
+        };
+        _tomatoView.endTapHandler = ^() {
+            [weakTomatoView removeFromSuperview];
+            [weakSelf.view addSubview:weakSelf.resetView];
         };
     }
     
@@ -78,8 +85,21 @@
 - (TTTomatoView *)resetView
 {
     if (!_resetView) {
-        _resetView = [[TTTomatoView alloc] initWithFrame:self.view.bounds];
+        _resetView = [[TTTomatoView alloc] initWithFrame:self.view.bounds maxMinute:2];
         _resetView.circleColor = [UIColor colorWithHue:0.22 saturation:0.52 brightness:0.82 alpha:1];
+        
+        __weak TTTomatoView *weakRestView = _resetView;
+        __weak TTMainViewController *weakSelf = self;
+        
+        _resetView.endHandler = ^() {
+            weakRestView.titleString = @"完成";
+        };
+        
+        _resetView.endTapHandler = ^() {
+            NSLog(@"完成后的操作");
+            [weakRestView removeFromSuperview];
+            [weakSelf.view addSubview:weakSelf.startMainView];
+        };
     }
     
     return _resetView;

@@ -14,12 +14,16 @@
 @interface TTTomatoView : TTBaseView
 {
     NSTimer *timer_;
-    NSInteger minuteCount_;
+    NSInteger maxMinute_;
 }
 
 @property (nonatomic, retain) TTCircleView *circleView;
 @property (nonatomic, retain) TTProgressView *progressView;
 @property (nonatomic, retain) UIColor *circleColor;
+@property (nonatomic, retain) NSString *titleString;
 @property (nonatomic, copy) void(^endHandler)();
+@property (nonatomic, copy) void(^endTapHandler)();
+
+- (id)initWithFrame:(CGRect)frame maxMinute:(NSInteger)maxMinute;
 
 @end
