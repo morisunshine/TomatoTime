@@ -15,6 +15,7 @@
 @property (nonatomic, retain) TTStartMainView *startMainView;
 @property (nonatomic, retain) TTTomatoView *tomatoView;
 @property (nonatomic, retain) TTTomatoView *resetView;
+@property (nonatomic, retain) UIButton *infoBtn;
 
 @end
 
@@ -34,6 +35,7 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.startMainView];
+    [self.view addSubview:self.infoBtn];
     // Do any additional setup after loading the view.
 }
 
@@ -53,7 +55,8 @@
         _startMainView = [[TTStartMainView alloc] initWithFrame:self.view.bounds];
         _startMainView.handler = ^() {
             NSLog(@"Start!");
-            [weakSelf.view addSubview:weakSelf.tomatoView];
+            weakSelf.infoBtn.hidden = NO;
+            [weakSelf.view insertSubview:weakSelf.tomatoView belowSubview:weakSelf.infoBtn];
             [weakStartMainView removeFromSuperview];
         };
     }
@@ -75,7 +78,7 @@
         };
         _tomatoView.endTapHandler = ^() {
             [weakTomatoView removeFromSuperview];
-            [weakSelf.view addSubview:weakSelf.resetView];
+            [weakSelf.view insertSubview:weakSelf.resetView belowSubview:weakSelf.infoBtn];
         };
     }
     
@@ -98,11 +101,25 @@
         _resetView.endTapHandler = ^() {
             NSLog(@"完成后的操作");
             [weakRestView removeFromSuperview];
-            [weakSelf.view addSubview:weakSelf.startMainView];
+            weakSelf.infoBtn.hidden = YES;
+            [weakSelf.view insertSubview:weakSelf.startMainView belowSubview:weakSelf.infoBtn];
         };
     }
     
     return _resetView;
+}
+
+- (UIButton *)infoBtn
+{
+    if (!_infoBtn) {
+        _infoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _infoBtn.backgroundColor = [UIColor redColor];
+        _infoBtn.hidden = YES;
+        _infoBtn.frame = CGRectMake(15, 0, 22, 22);
+        _infoBtn.bottom = APP_SCREEN_HEIGHT - 15;
+    }
+    
+    return _infoBtn;
 }
 
 @end
