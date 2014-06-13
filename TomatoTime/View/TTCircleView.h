@@ -14,15 +14,14 @@ typedef NS_ENUM(NSInteger, TTCircleViewMode) {
 };
 
 @interface TTCircleView : UIView
-{
-    CAShapeLayer *_trackLayer;
-    UIBezierPath *_trackPath;
-    UILabel *_titleLabel;
-}
 
+@property (nonatomic, retain) UILabel *titleLabel;
+@property (nonatomic, retain) CAShapeLayer *trackLayer;
 @property (nonatomic, retain) UIColor *circleColor;
 @property (nonatomic, retain) NSString *titleString;
 @property (nonatomic, retain) UIColor *titleColor;
 @property (nonatomic) TTCircleViewMode circleMode;
+
+- (id)initWithFrame:(CGRect)frame circleMode:(TTCircleViewMode)circleMode;
 
 @end

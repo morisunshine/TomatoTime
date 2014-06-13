@@ -12,63 +12,84 @@ NSInteger const kCircleLineWidth = 4;
 
 @implementation TTCircleView
 
+- (id)initWithFrame:(CGRect)frame circleMode:(TTCircleViewMode)circleMode
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.circleMode = circleMode;
+        [self setupView];
+    }
+    
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1];
+        [self setupView];
     }
     return self;
 }
 
-- (void)willMoveToSuperview:(UIView *)newSuperview
+#pragma mark - Private Methods -
+
+- (void)setupView
 {
-    if (TTCircleViewModeLine == self.circleMode) {
-        if (_trackLayer != nil) {
-            return;
-        }
+    self.backgroundColor = [UIColor clearColor];
+    
+    if (self.circleMode == TTCircleViewModeLine) {
+        [self.layer addSublayer:self.trackLayer];
+    } else {
+        self.layer.cornerRadius = self.bounds.size.width / 2;
+    }
+    
+    [self addSubview:self.titleLabel];
+}
+
+#pragma mark - Getters -
+
+- (UILabel *)titleLabel
+{
+    if (!_titleLabel) {
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,
+                                                                0 + CGRectGetHeight(self.bounds) / 2 - 20,
+                                                                CGRectGetWidth(self.bounds),
+                                                                40)];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.font = [UIFont boldSystemFontOfSize:22];
+        _titleLabel.textColor = [UIColor colorWithRed:0.41 green:0.41 blue:0.41 alpha:1];
+    }
+    
+    return _titleLabel;
+}
+
+- (CAShapeLayer *)trackLayer
+{
+    if (!_trackLayer) {
         
         _trackLayer = [CAShapeLayer layer];
         _trackLayer.frame = self.bounds;
         [self.layer addSublayer:_trackLayer];
         _trackLayer.fillColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1].CGColor;
-        if (self.circleColor) {
-            _trackLayer.strokeColor = self.circleColor.CGColor;
-        } else {
-            _trackLayer.strokeColor = [UIColor redColor].CGColor;
-        }
-        
+        _trackLayer.strokeColor = [UIColor redColor].CGColor;
         _trackLayer.contentsScale = [UIScreen mainScreen].scale;
         _trackLayer.lineCap = kCALineCapRound;
         _trackLayer.lineWidth = kCircleLineWidth;
         CGFloat progressWidth = self.bounds.size.width;
         CGFloat radius = progressWidth / 2 - kCircleLineWidth / 2;
         
-        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2) radius:radius startAngle:(M_PI * -90 / 180) endAngle:(M_PI * 270 / 180) clockwise:YES];
+        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2)
+                                                            radius:radius
+                                                        startAngle:(- M_PI / 2)
+                                                          endAngle:(M_PI * 3 / 2)
+                                                         clockwise:YES];
         _trackLayer.path = [path CGPath];
         [self.layer addSublayer:_trackLayer];
-    } else {
-        self.layer.backgroundColor = self.circleColor.CGColor;
-        self.layer.cornerRadius = self.bounds.size.width / 2;
     }
     
-    if (!_titleLabel) {
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0 + CGRectGetHeight(self.bounds) / 2 - 20, CGRectGetWidth(self.bounds), 40)];
-        _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.font = [UIFont boldSystemFontOfSize:22];
-        if (self.titleColor) {
-            _titleLabel.textColor = self.titleColor;
-        } else {
-            _titleLabel.textColor = [UIColor colorWithRed:0.41 green:0.41 blue:0.41 alpha:1];
-        }
-        
-        [self addSubview:_titleLabel];
-    }
-    
-    if (self.titleString) {
-        _titleLabel.text = self.titleString;
-    }
+    return _trackLayer;
 }
 
 #pragma mark - Setters -
@@ -77,7 +98,25 @@ NSInteger const kCircleLineWidth = 4;
 {
     _titleString = titleString;
     
-    _titleLabel.text = titleString;
+    self.titleLabel.text = titleString;
+}
+
+- (void)setTitleColor:(UIColor *)titleColor
+{
+    _titleColor = titleColor;
+    
+    self.titleLabel.textColor = titleColor;
+}
+
+- (void)setCircleColor:(UIColor *)circleColor
+{
+    _circleColor = circleColor;
+    
+    if (self.circleMode == TTCircleViewModeFill) {
+        self.layer.backgroundColor = circleColor.CGColor;
+    } else {
+        self.trackLayer.strokeColor = circleColor.CGColor;
+    }
 }
 /*
 // Only override drawRect: if you perform custom drawing.

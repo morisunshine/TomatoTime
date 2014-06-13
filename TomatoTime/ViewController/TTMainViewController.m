@@ -63,8 +63,13 @@
 
 - (TTTomatoView *)tomatoView
 {
+    __weak TTTomatoView *weakTomatoView = _tomatoView;
     if (!_tomatoView) {
         _tomatoView = [[TTTomatoView alloc] initWithFrame:self.view.bounds];
+        _tomatoView.endHandler = ^() {
+            [weakTomatoView removeFromSuperview];
+            NSLog(@"可以休息了！");
+        };
     }
     
     return _tomatoView;
