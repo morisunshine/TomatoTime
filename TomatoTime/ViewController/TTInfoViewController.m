@@ -71,6 +71,15 @@
     self.alertView.layer.masksToBounds = YES;
     self.feedBackBtn.layer.cornerRadius = 6.0;
     self.rateBtn.layer.cornerRadius = 6.0;
+    
+    CGRect alertRect = self.alertView.frame;
+    
+    CALayer *layer = [CALayer layer];
+    layer.borderColor = [UIColor colorWithRed:0.88 green:0.88 blue:0.89 alpha:1].CGColor;
+    layer.borderWidth = 2;
+    layer.frame = CGRectMake(-1, 310, CGRectGetWidth(alertRect) + 2, 2);
+    
+    [self.alertView.layer addSublayer:layer];
 }
 
 #pragma mark - Actions 

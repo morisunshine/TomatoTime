@@ -114,10 +114,12 @@
 {
     if (!_infoBtn) {
         _infoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _infoBtn.backgroundColor = [UIColor redColor];
+        _infoBtn.backgroundColor = [UIColor colorWithRed:0.65 green:0.65 blue:0.65 alpha:1];
         _infoBtn.hidden = YES;
         _infoBtn.frame = CGRectMake(15, 0, 22, 22);
         _infoBtn.bottom = APP_SCREEN_HEIGHT - 15;
+        _infoBtn.layer.cornerRadius = 11;
+        [_infoBtn setTitle:@"i" forState:UIControlStateNormal];
         [_infoBtn addTarget:self action:@selector(infoBtnTapped:) forControlEvents:UIControlEventTouchUpInside];
     }
     
