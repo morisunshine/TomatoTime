@@ -34,6 +34,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor clearColor];
+    
+    [self setupView];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -50,7 +52,7 @@
 {
     [super viewWillDisappear:animated];
     
-    [UIView animateWithDuration:0.2 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         self.alphaBackgroundView.alpha = 0;
     }];
 }
@@ -75,8 +77,14 @@
 
 - (IBAction)cancelBtnTapped:(UIButton *)sender
 {
-    [self.view removeFromSuperview];
-    [self removeFromParentViewController];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.view.alpha = 0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [self.view removeFromSuperview];
+            [self removeFromParentViewController];
+        }
+    }];
 }
 
 @end
