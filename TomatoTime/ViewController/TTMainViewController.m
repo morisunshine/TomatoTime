@@ -14,6 +14,7 @@
 
 @property (nonatomic, retain) TTStartMainView *startMainView;
 @property (nonatomic, retain) TTTomatoView *tomatoView;
+@property (nonatomic, retain) TTTomatoView *resetView;
 
 @end
 
@@ -67,6 +68,16 @@
     }
     
     return _tomatoView;
+}
+
+- (TTTomatoView *)resetView
+{
+    if (!_resetView) {
+        _resetView = [[TTTomatoView alloc] initWithFrame:self.view.bounds];
+        _resetView.circleColor = [UIColor colorWithHue:0.22 saturation:0.52 brightness:0.82 alpha:1];
+    }
+    
+    return _resetView;
 }
 
 @end

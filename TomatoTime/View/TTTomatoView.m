@@ -38,6 +38,14 @@
     [timer_ fire];
 }
 
+#pragma mark - Setters -
+
+- (void)setCircleColor:(UIColor *)circleColor
+{
+    _circleColor = circleColor;
+    self.circleView.circleColor = circleColor;
+}
+
 #pragma mark - Getters -
 
 - (TTCircleView *)circleView

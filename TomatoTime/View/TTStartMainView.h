@@ -6,15 +6,13 @@
 //  Copyright (c) 2014年 Sheldon. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TTBaseView.h"
 
 @class TTCircleView;
 
-@interface TTStartMainView : UIView
+@interface TTStartMainView : TTBaseView
 
 @property (nonatomic, retain) TTCircleView *circleView;
 @property (nonatomic, retain) UILabel *textLabel;
-
-@property (nonatomic, copy) void (^handler)();
 
 @end
