@@ -9,6 +9,7 @@
 #import "TTMainViewController.h"
 #import "TTStartMainView.h"
 #import "TTTomatoView.h"
+#import "TTInfoViewController.h"
 
 @interface TTMainViewController ()
 
@@ -117,9 +118,19 @@
         _infoBtn.hidden = YES;
         _infoBtn.frame = CGRectMake(15, 0, 22, 22);
         _infoBtn.bottom = APP_SCREEN_HEIGHT - 15;
+        [_infoBtn addTarget:self action:@selector(infoBtnTapped:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return _infoBtn;
+}
+
+#pragma mark - Actions -
+
+- (IBAction)infoBtnTapped:(UIButton *)sender
+{
+    TTInfoViewController *infoViewController = [[TTInfoViewController alloc] init];
+    [self addChildViewController:infoViewController];
+    [self.view addSubview:infoViewController.view];
 }
 
 @end

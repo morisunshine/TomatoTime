@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		082D158F194B2B1A00A23812 /* UIView+addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 082D158E194B2B1A00A23812 /* UIView+addition.m */; };
+		082D1593194B346000A23812 /* TTInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 082D1591194B346000A23812 /* TTInfoViewController.m */; };
+		082D1594194B346000A23812 /* TTInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 082D1592194B346000A23812 /* TTInfoViewController.xib */; };
 		08909C7F19225D7D0070A3B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C7E19225D7D0070A3B4 /* Foundation.framework */; };
 		08909C8119225D7D0070A3B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C8019225D7D0070A3B4 /* CoreGraphics.framework */; };
 		08909C8319225D7D0070A3B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C8219225D7D0070A3B4 /* UIKit.framework */; };
@@ -43,6 +45,9 @@
 		082D158C194B2B1A00A23812 /* CONSTANT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONSTANT.h; sourceTree = "<group>"; };
 		082D158D194B2B1A00A23812 /* UIView+addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+addition.h"; sourceTree = "<group>"; };
 		082D158E194B2B1A00A23812 /* UIView+addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+addition.m"; sourceTree = "<group>"; };
+		082D1590194B346000A23812 /* TTInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTInfoViewController.h; sourceTree = "<group>"; };
+		082D1591194B346000A23812 /* TTInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTInfoViewController.m; sourceTree = "<group>"; };
+		082D1592194B346000A23812 /* TTInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTInfoViewController.xib; sourceTree = "<group>"; };
 		08909C7B19225D7D0070A3B4 /* TomatoTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08909C7E19225D7D0070A3B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08909C8019225D7D0070A3B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -204,6 +209,9 @@
 			children = (
 				08EB7F76192CE12300B8A110 /* TTMainViewController.h */,
 				08EB7F77192CE12300B8A110 /* TTMainViewController.m */,
+				082D1590194B346000A23812 /* TTInfoViewController.h */,
+				082D1591194B346000A23812 /* TTInfoViewController.m */,
+				082D1592194B346000A23812 /* TTInfoViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				082D1594194B346000A23812 /* TTInfoViewController.xib in Resources */,
 				08909C9719225D7D0070A3B4 /* Images.xcassets in Resources */,
 				08909C8919225D7D0070A3B4 /* InfoPlist.strings in Resources */,
 				08909C9219225D7D0070A3B4 /* Main.storyboard in Resources */,
@@ -315,6 +324,7 @@
 				08FE22B8194968B000840623 /* TTStartMainView.m in Sources */,
 				08909CB71922627F0070A3B4 /* TTCircleView.m in Sources */,
 				08FE22C1194ABE8800840623 /* TTBaseView.m in Sources */,
+				082D1593194B346000A23812 /* TTInfoViewController.m in Sources */,
 				08EB7F72192B9BDE00B8A110 /* TTProgressView.m in Sources */,
 				08EB7F78192CE12300B8A110 /* TTMainViewController.m in Sources */,
 				082D158F194B2B1A00A23812 /* UIView+addition.m in Sources */,
