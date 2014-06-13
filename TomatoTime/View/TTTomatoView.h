@@ -19,6 +19,7 @@
 
 @property (nonatomic, retain) TTCircleView *circleView;
 @property (nonatomic, retain) TTProgressView *progressView;
+@property (nonatomic, retain) UIScrollView *backgroundScrollView;
 @property (nonatomic, retain) UIColor *circleColor;
 @property (nonatomic, retain) NSString *titleString;
 @property (nonatomic, copy) void(^endHandler)();

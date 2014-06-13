@@ -37,8 +37,9 @@
 
 - (void)setupView
 {
-    [self addSubview:self.circleView];
-    [self addSubview:self.progressView];
+    [self addSubview:self.backgroundScrollView];
+    [self.backgroundScrollView addSubview:self.circleView];
+    [self.backgroundScrollView addSubview:self.progressView];
     
     timer_ = [NSTimer timerWithTimeInterval:20 target:self selector:@selector(updateMinuteCount) userInfo:nil repeats:YES];
     NSRunLoop *runloop = [NSRunLoop currentRunLoop];
@@ -62,6 +63,25 @@
 }
 
 #pragma mark - Getters -
+
+- (UIScrollView *)backgroundScrollView
+{
+    if (!_backgroundScrollView) {
+        
+        UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, -30, 100, 24)];
+        tipLabel.centerX = self.width / 2;
+        tipLabel.text = @"Hasta la vista";
+        tipLabel.font = FONTSIZE(14);
+        tipLabel.textColor = GLOBAL_COLOR;
+        tipLabel.textAlignment = NSTextAlignmentCenter;
+        _backgroundScrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+        _backgroundScrollView.backgroundColor = self.backgroundColor;
+        _backgroundScrollView.alwaysBounceVertical = YES;
+        [_backgroundScrollView addSubview:tipLabel];
+    }
+    
+    return _backgroundScrollView;
+}
 
 - (TTCircleView *)circleView
 {

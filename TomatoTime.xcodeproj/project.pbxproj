@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082D158F194B2B1A00A23812 /* UIView+addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 082D158E194B2B1A00A23812 /* UIView+addition.m */; };
 		08909C7F19225D7D0070A3B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C7E19225D7D0070A3B4 /* Foundation.framework */; };
 		08909C8119225D7D0070A3B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C8019225D7D0070A3B4 /* CoreGraphics.framework */; };
 		08909C8319225D7D0070A3B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C8219225D7D0070A3B4 /* UIKit.framework */; };
@@ -39,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		082D158C194B2B1A00A23812 /* CONSTANT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONSTANT.h; sourceTree = "<group>"; };
+		082D158D194B2B1A00A23812 /* UIView+addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+addition.h"; sourceTree = "<group>"; };
+		082D158E194B2B1A00A23812 /* UIView+addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+addition.m"; sourceTree = "<group>"; };
 		08909C7B19225D7D0070A3B4 /* TomatoTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08909C7E19225D7D0070A3B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08909C8019225D7D0070A3B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,6 +98,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		082D158B194B2B1A00A23812 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				082D158C194B2B1A00A23812 /* CONSTANT.h */,
+				082D158D194B2B1A00A23812 /* UIView+addition.h */,
+				082D158E194B2B1A00A23812 /* UIView+addition.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		08909C7219225D7D0070A3B4 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +141,7 @@
 		08909C8419225D7D0070A3B4 /* TomatoTime */ = {
 			isa = PBXGroup;
 			children = (
+				082D158B194B2B1A00A23812 /* Common */,
 				08909CB3192262730070A3B4 /* View */,
 				08909CB4192262730070A3B4 /* ViewController */,
 				08909C8D19225D7D0070A3B4 /* TTAppDelegate.h */,
@@ -302,6 +317,7 @@
 				08FE22C1194ABE8800840623 /* TTBaseView.m in Sources */,
 				08EB7F72192B9BDE00B8A110 /* TTProgressView.m in Sources */,
 				08EB7F78192CE12300B8A110 /* TTMainViewController.m in Sources */,
+				082D158F194B2B1A00A23812 /* UIView+addition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
