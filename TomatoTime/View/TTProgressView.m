@@ -32,11 +32,11 @@
 - (UILabel *)countLabel
 {
     if (!_countLabel) {
-        _countLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 12, 12)];
+        _countLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 14, 14)];
         _countLabel.text = @"1";
         _countLabel.textAlignment = NSTextAlignmentLeft;
         _countLabel.textColor = [UIColor colorWithRed:0.71 green:0.71 blue:0.71 alpha:1];
-        _countLabel.font = [UIFont boldSystemFontOfSize:16];
+        _countLabel.font = FONTSIZE(15);
     }
     
     return _countLabel;
@@ -45,8 +45,8 @@
 - (UIView *)totoalView
 {
     if (!_totoalView) {
-        _totoalView = [[UIView alloc] initWithFrame:CGRectMake(0, 14, CGRectGetWidth(self.bounds), 2)];
-        _totoalView.layer.cornerRadius = 4;
+        _totoalView = [[UIView alloc] initWithFrame:CGRectMake(0, 14, CGRectGetWidth(self.bounds), 4)];
+        _totoalView.layer.cornerRadius = 2;
         _totoalView.backgroundColor = [UIColor colorWithRed:0.71 green:0.71 blue:0.71 alpha:1];
     }
     
@@ -56,8 +56,8 @@
 - (UIView *)progressView
 {
     if (!_progressView) {
-        _progressView = [[UIView alloc] initWithFrame:CGRectMake(0, 14, 0, 2)];
-        _progressView.layer.cornerRadius = 4;
+        _progressView = [[UIView alloc] initWithFrame:CGRectMake(0, 14, 0, 4)];
+        _progressView.layer.cornerRadius = 2;
         _progressView.backgroundColor = [UIColor colorWithRed:0.87 green:0.31 blue:0.23 alpha:1];
     }
     
@@ -70,8 +70,8 @@
 {
     if (left) {
         [UIView animateWithDuration:60 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-            self.countLabel.frame = CGRectMake(CGRectGetWidth(self.bounds) - 12, 0, 20, 12);
-            self.progressView.frame = CGRectMake(0, 14, CGRectGetWidth(self.bounds), 2);
+            self.countLabel.frame = CGRectMake(CGRectGetWidth(self.bounds) - 12, 0, 20, 14);
+            self.progressView.frame = CGRectMake(0, 14, CGRectGetWidth(self.bounds), 4);
         } completion:^(BOOL finished) {
             
         }];
@@ -87,8 +87,8 @@
     if (_count == 60) {
         _count = 0;
         self.countLabel.text = [NSString stringWithFormat:@"%i", _count];
-        self.progressView.frame = CGRectMake(0, 14, 0, 2);
-        self.countLabel.frame = CGRectMake(0, 0, 12, 12);
+        self.progressView.frame = CGRectMake(0, 14, 0, 4);
+        self.countLabel.frame = CGRectMake(0, 0, 14, 14);
         [self oneSecondAnimationsWithLeft:YES];
     }
 }

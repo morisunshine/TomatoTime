@@ -43,7 +43,7 @@
 {
     [super viewWillAppear:animated];
     
-    [UIView animateWithDuration:0.2 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         self.alphaBackgroundView.alpha = 0.5;
     }];
 }

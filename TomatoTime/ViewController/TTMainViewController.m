@@ -70,6 +70,7 @@
     if (!_tomatoView) {
         _tomatoView = [[TTTomatoView alloc] initWithFrame:self.view.bounds maxMinute:2];
         
+        
         __weak TTTomatoView *weakTomatoView = _tomatoView;
         __weak TTMainViewController *weakSelf = self;
         
