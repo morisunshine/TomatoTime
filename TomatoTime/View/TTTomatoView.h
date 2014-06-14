@@ -15,6 +15,7 @@
 {
     NSTimer *timer_;
     NSInteger maxMinute_;
+    UILongPressGestureRecognizer *longPressGestureRecognizer_;
 }
 
 @property (nonatomic, retain) TTCircleView *circleView;

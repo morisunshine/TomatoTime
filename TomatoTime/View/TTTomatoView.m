@@ -41,6 +41,9 @@
     [self.backgroundScrollView addSubview:self.circleView];
     [self.backgroundScrollView addSubview:self.progressView];
     
+    longPressGestureRecognizer_ = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAction:)];
+    [self.circleView addGestureRecognizer:longPressGestureRecognizer_];
+    
     timer_ = [NSTimer timerWithTimeInterval:20 target:self selector:@selector(updateMinuteCount) userInfo:nil repeats:YES];
     NSRunLoop *runloop = [NSRunLoop currentRunLoop];
     [runloop addTimer:timer_ forMode:NSDefaultRunLoopMode];
@@ -117,6 +120,7 @@
     
     if (maxMinute_ == 0) {
         [timer_ invalidate];
+        [self.circleView removeGestureRecognizer:longPressGestureRecognizer_];
         if (self.endHandler) {
             self.endHandler();
         }
@@ -126,6 +130,13 @@
 }
 
 #pragma mark - Actions -
+
+- (IBAction)longPressAction:(UILongPressGestureRecognizer *)sender
+{
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"开始");
+    }
+}
 
 - (IBAction)endTaped:(id)sender
 {
