@@ -13,7 +13,7 @@ typedef NS_ENUM(NSInteger, TTCircleViewMode) {
     TTCircleViewModeFill       //实体的圆
 };
 
-@interface TTCircleView : UIView
+@interface TTCircleView : UIControl
 
 @property (nonatomic, retain) UILabel *titleLabel;
 @property (nonatomic, retain) CAShapeLayer *trackLayer;

@@ -92,6 +92,17 @@ NSInteger const kCircleLineWidth = 4;
     return _trackLayer;
 }
 
+#pragma mark - Rewrites -
+
+- (void)setHighlighted:(BOOL)highlighted
+{
+    if (highlighted) {
+        self.circleColor = [UIColor colorWithRed:0.98 green:0.75 blue:0.32 alpha:1];
+    } else {
+        self.circleColor = [UIColor colorWithRed:0.87 green:0.32 blue:0.24 alpha:1];
+    }
+}
+
 #pragma mark - Setters -
 
 - (void)setTitleString:(NSString *)titleString

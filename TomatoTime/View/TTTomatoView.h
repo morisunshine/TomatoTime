@@ -15,10 +15,10 @@
 {
     NSTimer *timer_;
     NSInteger maxMinute_;
-    UILongPressGestureRecognizer *longPressGestureRecognizer_;
 }
 
 @property (nonatomic, retain) TTCircleView *circleView;
+@property (nonatomic, retain) UIButton *deleteBtn;
 @property (nonatomic, retain) TTProgressView *progressView;
 @property (nonatomic, retain) UIScrollView *backgroundScrollView;
 @property (nonatomic, retain) UIColor *circleColor;

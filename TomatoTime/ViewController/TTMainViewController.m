@@ -51,7 +51,7 @@
 - (TTStartMainView *)startMainView
 {
     __weak TTMainViewController *weakSelf = self;
-    __weak TTStartMainView *weakStartMainView = _startMainView;
+    __weak __block TTStartMainView *weakStartMainView = _startMainView;
     if (!_startMainView) {
         _startMainView = [[TTStartMainView alloc] initWithFrame:self.view.bounds];
         _startMainView.handler = ^() {
@@ -59,6 +59,7 @@
             weakSelf.infoBtn.hidden = NO;
             [weakSelf.view insertSubview:weakSelf.tomatoView belowSubview:weakSelf.infoBtn];
             [weakStartMainView removeFromSuperview];
+            weakStartMainView = nil;
         };
     }
     
@@ -71,7 +72,7 @@
         _tomatoView = [[TTTomatoView alloc] initWithFrame:self.view.bounds maxMinute:2];
         
         
-        __weak TTTomatoView *weakTomatoView = _tomatoView;
+        __block TTTomatoView *weakTomatoView = _tomatoView;
         __weak TTMainViewController *weakSelf = self;
         
         _tomatoView.endHandler = ^() {
@@ -80,6 +81,7 @@
         };
         _tomatoView.endTapHandler = ^() {
             [weakTomatoView removeFromSuperview];
+            weakTomatoView = nil;
             [weakSelf.view insertSubview:weakSelf.resetView belowSubview:weakSelf.infoBtn];
         };
     }
@@ -93,7 +95,7 @@
         _resetView = [[TTTomatoView alloc] initWithFrame:self.view.bounds maxMinute:2];
         _resetView.circleColor = [UIColor colorWithHue:0.22 saturation:0.52 brightness:0.82 alpha:1];
         
-        __weak TTTomatoView *weakRestView = _resetView;
+        __block TTTomatoView *weakRestView = _resetView;
         __weak TTMainViewController *weakSelf = self;
         
         _resetView.endHandler = ^() {
@@ -103,6 +105,7 @@
         _resetView.endTapHandler = ^() {
             NSLog(@"完成后的操作");
             [weakRestView removeFromSuperview];
+            weakRestView = nil;
             weakSelf.infoBtn.hidden = YES;
             [weakSelf.view insertSubview:weakSelf.startMainView belowSubview:weakSelf.infoBtn];
         };
