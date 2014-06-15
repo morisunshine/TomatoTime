@@ -15,6 +15,7 @@
 {
     NSTimer *timer_;
     NSInteger maxMinute_;
+    
 }
 
 @property (nonatomic, retain) TTCircleView *circleView;

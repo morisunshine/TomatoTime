@@ -80,7 +80,7 @@ NSInteger const kCircleLineWidth = 4;
         _trackLayer.frame = self.bounds;
         [self.layer addSublayer:_trackLayer];
         _trackLayer.fillColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1].CGColor;
-        _trackLayer.strokeColor = [UIColor redColor].CGColor;
+        _trackLayer.strokeColor = self.circleColor.CGColor;
         _trackLayer.contentsScale = [UIScreen mainScreen].scale;
         _trackLayer.lineCap = kCALineCapRound;
         _trackLayer.lineWidth = kCircleLineWidth;
@@ -149,6 +149,19 @@ NSInteger const kCircleLineWidth = 4;
 }
 
 #pragma mark - Setters -
+
+- (void)setCircleMode:(TTCircleViewMode)circleMode
+{
+    _circleMode = circleMode;
+    if (circleMode == TTCircleViewModeLine) {
+        [self.layer addSublayer:self.trackLayer];
+    } else {
+        [self.trackLayer removeFromSuperlayer];
+        self.layer.cornerRadius = self.bounds.size.width / 2;
+    }
+    
+    [self addSubview:self.titleLabel];
+}
 
 - (void)setTitleString:(NSString *)titleString
 {

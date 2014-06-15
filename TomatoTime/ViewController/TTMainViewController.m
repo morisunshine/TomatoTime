@@ -59,7 +59,7 @@
             weakSelf.infoBtn.hidden = NO;
             [weakSelf.view insertSubview:weakSelf.tomatoView belowSubview:weakSelf.infoBtn];
             [weakStartMainView removeFromSuperview];
-            weakStartMainView = nil;
+            _startMainView = nil;
         };
     }
     
@@ -70,7 +70,7 @@
 {
     if (!_tomatoView) {
         _tomatoView = [[TTTomatoView alloc] initWithFrame:self.view.bounds maxMinute:2];
-        
+        _tomatoView.circleColor = [UIColor colorWithRed:0.87 green:0.31 blue:0.23 alpha:1];
         
         __block TTTomatoView *weakTomatoView = _tomatoView;
         __weak TTMainViewController *weakSelf = self;
@@ -81,7 +81,7 @@
         };
         _tomatoView.endTapHandler = ^() {
             [weakTomatoView removeFromSuperview];
-            weakTomatoView = nil;
+            _tomatoView = nil;
             [weakSelf.view insertSubview:weakSelf.resetView belowSubview:weakSelf.infoBtn];
         };
     }
@@ -105,7 +105,7 @@
         _resetView.endTapHandler = ^() {
             NSLog(@"完成后的操作");
             [weakRestView removeFromSuperview];
-            weakRestView = nil;
+            _resetView = nil;
             weakSelf.infoBtn.hidden = YES;
             [weakSelf.view insertSubview:weakSelf.startMainView belowSubview:weakSelf.infoBtn];
         };

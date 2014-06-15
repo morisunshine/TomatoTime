@@ -37,6 +37,9 @@
 
 - (void)setupView
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(touchBegin:) name:TOUCH_NOTIFICATION_BEGIN object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(touchEnd:) name:TOUCH_NOTIFICATION_END object:nil];
+    self.userInteractionEnabled = YES;
     [self addSubview:self.backgroundScrollView];
     [self.backgroundScrollView addSubview:self.circleView];
     [self.backgroundScrollView addSubview:self.progressView];
@@ -45,6 +48,8 @@
     NSRunLoop *runloop = [NSRunLoop currentRunLoop];
     [runloop addTimer:timer_ forMode:NSDefaultRunLoopMode];
     [timer_ fire];
+    
+    [self performSelector:@selector(longTimeNoTouch) withObject:nil afterDelay:4];
 }
 
 #pragma mark - Setters -
@@ -56,6 +61,7 @@
 
 - (void)setCircleColor:(UIColor *)circleColor
 {
+    _circleColor = circleColor;
     [self.circleView setState:TTCircleViewStateNormal color:circleColor];
 }
 
@@ -119,8 +125,19 @@
             self.endHandler();
         }
         UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endTaped:)];
-        [self addGestureRecognizer:tapGestureRecognizer];
+        [self.circleView addGestureRecognizer:tapGestureRecognizer];
     }
+}
+
+- (void)longTimeNoTouch
+{
+    NSLog(@"很久没有点击了！");
+    [UIView animateWithDuration:1 animations:^{
+        self.circleView.trackLayer.fillColor = [UIColor blackColor].CGColor;
+        self.backgroundScrollView.backgroundColor = [UIColor blackColor];
+        self.circleView.titleColor = [UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1];
+        self.circleView.circleMode = TTCircleViewModeLine;
+    }];
 }
 
 #pragma mark - Actions -
@@ -139,13 +156,24 @@
     }
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+#pragma mark - Notification -
+
+- (void)touchBegin:(NSNotification *)notification
 {
-    // Drawing code
+    NSLog(@"点击!");
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(longTimeNoTouch) object:nil];
 }
-*/
+
+- (void)touchEnd:(NSNotification *)notification
+{
+    NSLog(@"点击结束!");
+    [UIView animateWithDuration:1 animations:^{
+        self.backgroundScrollView.backgroundColor = self.backgroundColor;
+        self.circleView.titleColor = [UIColor whiteColor];
+        self.circleView.circleMode = TTCircleViewModeFill;
+        self.circleView.circleColor = self.circleColor;
+    }];
+    [self performSelector:@selector(longTimeNoTouch) withObject:nil afterDelay:4];
+}
 
 @end

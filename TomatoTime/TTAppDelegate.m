@@ -13,6 +13,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+    
     return YES;
 }
 							
@@ -41,6 +43,21 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Events -
+
+- (void)sendEvent:(UIEvent *)event
+{
+    if (event.type==UIEventTypeTouches) {
+        UITouchPhase phase = [[event.allTouches anyObject] phase];
+        if (phase == UITouchPhaseBegan) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:TOUCH_NOTIFICATION_BEGIN object:nil];
+        } else if (phase == UITouchPhaseEnded) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:TOUCH_NOTIFICATION_END object:nil];
+        }
+    }
+    [super sendEvent:event];
 }
 
 @end

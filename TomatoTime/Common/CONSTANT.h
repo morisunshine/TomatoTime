@@ -15,4 +15,7 @@
 #define FONTSIZE(s)                 [UIFont boldSystemFontOfSize:(s)]
 #define GLOBAL_COLOR                [UIColor colorWithRed:0.41 green:0.41 blue:0.41 alpha:1]
 
+#define TOUCH_NOTIFICATION_BEGIN           @"TouchBegin"
+#define TOUCH_NOTIFICATION_END             @"TouchEnd"
+
 #endif

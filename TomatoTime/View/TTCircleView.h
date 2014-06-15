@@ -39,7 +39,6 @@ typedef NS_ENUM(NSInteger, TTCircleViewState) {
 
 - (id)initWithFrame:(CGRect)frame circleMode:(TTCircleViewMode)circleMode;
 - (void)setState:(TTCircleViewState)state color:(UIColor *)color;
-- (void)setState:(TTCircleViewState)state image:(UIImage *)image;
 - (void)setState:(TTCircleViewState)state title:(NSString *)title;
 
 @end
