@@ -49,6 +49,10 @@ NSInteger const kCircleLineWidth = 4;
     
     [self addSubview:self.titleLabel];
     [self addSubview:self.trashImageView];
+    
+    longPressGestureRecognizer_ = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressed:)];
+    longPressGestureRecognizer_.minimumPressDuration = 3;
+    [self addGestureRecognizer:longPressGestureRecognizer_];
 }
 
 #pragma mark - Getters -
@@ -169,6 +173,15 @@ NSInteger const kCircleLineWidth = 4;
         self.layer.backgroundColor = circleColor.CGColor;
     } else {
         self.trackLayer.strokeColor = circleColor.CGColor;
+    }
+}
+
+#pragma mark - Actions -
+
+- (IBAction)longPressed:(UILongPressGestureRecognizer *)sender
+{
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"Give up!");
     }
 }
 /*

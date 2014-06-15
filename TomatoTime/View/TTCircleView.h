@@ -26,6 +26,7 @@ typedef NS_ENUM(NSInteger, TTCircleViewState) {
     UIImage *highlightedImage_;
     NSString *normalTitle_;
     NSString *highlighedTitle_;
+    UILongPressGestureRecognizer *longPressGestureRecognizer_;
 }
 
 @property (nonatomic, retain) UILabel *titleLabel;
