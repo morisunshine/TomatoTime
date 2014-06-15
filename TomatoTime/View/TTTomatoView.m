@@ -51,15 +51,12 @@
 
 - (void)setTitleString:(NSString *)titleString
 {
-    _titleString = titleString;
-    
-    self.circleView.titleString = titleString;
+    [self.circleView setState:TTCircleViewStateNormal title:titleString];
 }
 
 - (void)setCircleColor:(UIColor *)circleColor
 {
-    _circleColor = circleColor;
-    self.circleView.circleColor = circleColor;
+    [self.circleView setState:TTCircleViewStateNormal color:circleColor];
 }
 
 #pragma mark - Getters -
@@ -89,7 +86,8 @@
         _circleView = [[TTCircleView alloc] initWithFrame:CGRectMake(0, 100, 150, 150) circleMode:TTCircleViewModeFill];
         _circleView.titleColor = [UIColor whiteColor];
         _circleView.center = CGPointMake(self.center.x, _circleView.center.y);
-        _circleView.circleColor = [UIColor colorWithRed:0.87 green:0.32 blue:0.24 alpha:1];
+        [_circleView setState:TTCircleViewStateNormal color:[UIColor colorWithRed:0.87 green:0.32 blue:0.24 alpha:1]];
+        [_circleView setState:TTCircleViewStateHighlighted title:@"长按3秒，放弃番茄"];
         _circleView.userInteractionEnabled = YES;
     }
     
@@ -113,7 +111,7 @@
 {
     maxMinute_ --;
     
-    self.circleView.titleString = [NSString stringWithFormat:@"%d", maxMinute_];
+    [self.circleView setState:TTCircleViewStateNormal title:[NSString stringWithFormat:@"%d", maxMinute_]];
     
     if (maxMinute_ == 0) {
         [timer_ invalidate];

@@ -39,6 +39,8 @@ NSInteger const kCircleLineWidth = 4;
 {
     self.backgroundColor = [UIColor clearColor];
     
+    highlightedColor_ = [UIColor colorWithRed:0.98 green:0.75 blue:0.32 alpha:1];
+    
     if (self.circleMode == TTCircleViewModeLine) {
         [self.layer addSublayer:self.trackLayer];
     } else {
@@ -46,6 +48,7 @@ NSInteger const kCircleLineWidth = 4;
     }
     
     [self addSubview:self.titleLabel];
+    [self addSubview:self.trashImageView];
 }
 
 #pragma mark - Getters -
@@ -58,7 +61,7 @@ NSInteger const kCircleLineWidth = 4;
                                                                 CGRectGetWidth(self.bounds),
                                                                 40)];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.font = [UIFont boldSystemFontOfSize:22];
+        _titleLabel.font = FONTSIZE(30);
         _titleLabel.textColor = [UIColor colorWithRed:0.41 green:0.41 blue:0.41 alpha:1];
     }
     
@@ -92,14 +95,52 @@ NSInteger const kCircleLineWidth = 4;
     return _trackLayer;
 }
 
+- (UIImageView *)trashImageView
+{
+    if (!_trashImageView) {
+        _trashImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"btn_trash"]];
+        _trashImageView.top = 32;
+        _trashImageView.hidden = YES;
+        _trashImageView.centerX = self.width / 2;
+    }
+    
+    return _trashImageView;
+}
+
 #pragma mark - Rewrites -
 
 - (void)setHighlighted:(BOOL)highlighted
 {
     if (highlighted) {
-        self.circleColor = [UIColor colorWithRed:0.98 green:0.75 blue:0.32 alpha:1];
+        self.circleColor = highlightedColor_;
+        self.titleString = highlighedTitle_;
+        self.trashImageView.hidden = NO;
     } else {
-        self.circleColor = [UIColor colorWithRed:0.87 green:0.32 blue:0.24 alpha:1];
+        self.circleColor = normalColor_;
+        self.titleString = normalTitle_;
+        self.trashImageView.hidden = YES;
+    }
+}
+
+#pragma mark - Public Methods -
+
+- (void)setState:(TTCircleViewState)state color:(UIColor *)color
+{
+    if (state == TTCircleViewStateNormal) {
+        normalColor_ = color;
+        self.circleColor = color;
+    } else {
+        highlightedColor_ = color;
+    }
+}
+
+- (void)setState:(TTCircleViewState)state title:(NSString *)title
+{
+    if (state == TTCircleViewStateNormal) {
+        normalTitle_ = title;
+        self.titleString = title;
+    } else {
+        highlighedTitle_ = title;
     }
 }
 
@@ -110,6 +151,7 @@ NSInteger const kCircleLineWidth = 4;
     _titleString = titleString;
     
     self.titleLabel.text = titleString;
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)setTitleColor:(UIColor *)titleColor
