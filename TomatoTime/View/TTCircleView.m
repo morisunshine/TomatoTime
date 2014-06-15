@@ -39,8 +39,6 @@ NSInteger const kCircleLineWidth = 4;
 {
     self.backgroundColor = [UIColor clearColor];
     
-    highlightedColor_ = [UIColor colorWithRed:0.98 green:0.75 blue:0.32 alpha:1];
-    
     if (self.circleMode == TTCircleViewModeLine) {
         [self.layer addSublayer:self.trackLayer];
     } else {
@@ -48,7 +46,6 @@ NSInteger const kCircleLineWidth = 4;
     }
     
     [self addSubview:self.titleLabel];
-    [self addSubview:self.trashImageView];
     
     longPressGestureRecognizer_ = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressed:)];
     longPressGestureRecognizer_.minimumPressDuration = 3;
@@ -115,14 +112,18 @@ NSInteger const kCircleLineWidth = 4;
 
 - (void)setHighlighted:(BOOL)highlighted
 {
-    if (highlighted) {
-        self.circleColor = highlightedColor_;
-        self.titleString = highlighedTitle_;
-        self.trashImageView.hidden = NO;
-    } else {
-        self.circleColor = normalColor_;
-        self.titleString = normalTitle_;
-        self.trashImageView.hidden = YES;
+    [super setHighlighted:highlighted];
+    
+    if (self.needHighlighted) {
+        if (highlighted) {
+            self.circleColor = highlightedColor_;
+            self.titleString = highlighedTitle_;
+            self.trashImageView.hidden = NO;
+        } else {
+            self.circleColor = normalColor_;
+            self.titleString = normalTitle_;
+            self.trashImageView.hidden = YES;
+        }
     }
 }
 
@@ -149,6 +150,14 @@ NSInteger const kCircleLineWidth = 4;
 }
 
 #pragma mark - Setters -
+
+- (void)setNeedHighlighted:(BOOL)needHighlighted
+{
+    _needHighlighted = needHighlighted;
+    
+    highlightedColor_ = [UIColor colorWithRed:0.98 green:0.75 blue:0.32 alpha:1];
+    [self addSubview:self.trashImageView];
+}
 
 - (void)setCircleMode:(TTCircleViewMode)circleMode
 {

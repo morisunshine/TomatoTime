@@ -120,7 +120,7 @@
         _infoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_infoBtn setImage:[UIImage imageNamed:@"btn_info"] forState:UIControlStateNormal];
         _infoBtn.hidden = YES;
-        _infoBtn.frame = CGRectMake(15, 0, 22, 22);
+        _infoBtn.frame = CGRectMake(15, 0, 33, 33);
         _infoBtn.bottom = APP_SCREEN_HEIGHT - 15;
         [_infoBtn addTarget:self action:@selector(infoBtnTapped:) forControlEvents:UIControlEventTouchUpInside];
     }

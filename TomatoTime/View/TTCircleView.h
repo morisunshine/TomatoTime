@@ -36,6 +36,7 @@ typedef NS_ENUM(NSInteger, TTCircleViewState) {
 @property (nonatomic, retain) UIColor *titleColor;
 @property (nonatomic, retain) UIImageView *trashImageView;
 @property (nonatomic) TTCircleViewMode circleMode;
+@property (nonatomic) BOOL needHighlighted;
 
 - (id)initWithFrame:(CGRect)frame circleMode:(TTCircleViewMode)circleMode;
 - (void)setState:(TTCircleViewState)state color:(UIColor *)color;

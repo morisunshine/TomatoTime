@@ -34,13 +34,11 @@
 - (TTCircleView *)circleView
 {
     if (!_circleView) {
-        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(startToTomato:)];
         _circleView = [[TTCircleView alloc] initWithFrame:CGRectMake(0, 100, 150, 150)];
         _circleView.center = CGPointMake(self.center.x, _circleView.center.y);
         _circleView.circleColor = [UIColor colorWithRed:0.87 green:0.32 blue:0.24 alpha:1];
         _circleView.titleString = @"开始";
-        _circleView.userInteractionEnabled = YES;
-        [_circleView addGestureRecognizer:tapGestureRecognizer];
+        [_circleView addTarget:self action:@selector(startToTomato:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return _circleView;
@@ -66,9 +64,20 @@
 
 - (IBAction)startToTomato:(UITapGestureRecognizer *)sender
 {
-    if (self.handler) {
-        self.handler();
-    }
+    POPSpringAnimation *startAnimation = [POPSpringAnimation animation];
+    startAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewCenter];
+    startAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(APP_SCREEN_WIDTH / 2, APP_SCREEN_HEIGHT / 2)];
+    startAnimation.springBounciness = 20.0;
+    startAnimation.springSpeed = 20.0;
+    startAnimation.completionBlock = ^(POPAnimation *animation, BOOL finish) {
+        if (finish) {
+            if (self.handler) {
+                self.handler();
+            }
+        }
+    };
+    
+    [self.circleView pop_addAnimation:startAnimation forKey:@"pop"];
 }
 
 /*
