@@ -69,7 +69,7 @@
 - (TTTomatoView *)tomatoView
 {
     if (!_tomatoView) {
-        _tomatoView = [[TTTomatoView alloc] initWithFrame:self.view.bounds maxMinute:2];
+        _tomatoView = [[TTTomatoView alloc] initWithFrame:self.view.bounds maxMinute:kTomatoMinute];
         _tomatoView.circleColor = [UIColor colorWithRed:0.87 green:0.31 blue:0.23 alpha:1];
         
         __block TTTomatoView *weakTomatoView = _tomatoView;
@@ -92,7 +92,7 @@
 - (TTTomatoView *)resetView
 {
     if (!_resetView) {
-        _resetView = [[TTTomatoView alloc] initWithFrame:self.view.bounds maxMinute:2];
+        _resetView = [[TTTomatoView alloc] initWithFrame:self.view.bounds maxMinute:kRestMinute];
         _resetView.circleColor = [UIColor colorWithHue:0.22 saturation:0.52 brightness:0.82 alpha:1];
         
         __block TTTomatoView *weakRestView = _resetView;
@@ -122,7 +122,6 @@
         _infoBtn.hidden = YES;
         _infoBtn.frame = CGRectMake(15, 0, 22, 22);
         _infoBtn.bottom = APP_SCREEN_HEIGHT - 15;
-        _infoBtn.layer.cornerRadius = 11;
         [_infoBtn addTarget:self action:@selector(infoBtnTapped:) forControlEvents:UIControlEventTouchUpInside];
     }
     

@@ -69,7 +69,7 @@
 - (void)oneSecondAnimationsWithLeft:(BOOL)left
 {
     if (left) {
-        [UIView animateWithDuration:60 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        [UIView animateWithDuration:kMinuteSecond delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
             self.countLabel.frame = CGRectMake(CGRectGetWidth(self.bounds) - 12, 0, 20, 14);
             self.progressView.frame = CGRectMake(0, 14, CGRectGetWidth(self.bounds), 4);
         } completion:^(BOOL finished) {
@@ -84,7 +84,7 @@
     
     self.countLabel.text = [NSString stringWithFormat:@"%i",_count];
     
-    if (_count == 60) {
+    if (_count == kMinuteSecond) {
         _count = 0;
         self.countLabel.text = [NSString stringWithFormat:@"%i", _count];
         self.progressView.frame = CGRectMake(0, 14, 0, 4);

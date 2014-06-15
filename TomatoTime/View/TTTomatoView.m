@@ -44,7 +44,7 @@
     [self.backgroundScrollView addSubview:self.circleView];
     [self.backgroundScrollView addSubview:self.progressView];
     
-    timer_ = [NSTimer timerWithTimeInterval:20 target:self selector:@selector(updateMinuteCount) userInfo:nil repeats:YES];
+    timer_ = [NSTimer timerWithTimeInterval:kMinuteSecond target:self selector:@selector(updateMinuteCount) userInfo:nil repeats:YES];
     NSRunLoop *runloop = [NSRunLoop currentRunLoop];
     [runloop addTimer:timer_ forMode:NSDefaultRunLoopMode];
     [timer_ fire];
