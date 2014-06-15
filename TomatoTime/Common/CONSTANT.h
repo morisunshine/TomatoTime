@@ -18,6 +18,7 @@
 static const NSInteger kTomatoMinute = 2;
 static const NSInteger kRestMinute = 2;
 static const NSInteger kMinuteSecond = 20;
+static const NSInteger kSleepSecond = 10;
 
 #define TOUCH_NOTIFICATION_BEGIN           @"TouchBegin"
 #define TOUCH_NOTIFICATION_END             @"TouchEnd"

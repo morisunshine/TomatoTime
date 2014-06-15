@@ -49,7 +49,7 @@
     [runloop addTimer:timer_ forMode:NSDefaultRunLoopMode];
     [timer_ fire];
     
-    [self performSelector:@selector(longTimeNoTouch) withObject:nil afterDelay:4];
+    [self performSelector:@selector(longTimeNoTouch) withObject:nil afterDelay:kSleepSecond];
 }
 
 #pragma mark - Setters -
@@ -173,7 +173,7 @@
         self.circleView.circleMode = TTCircleViewModeFill;
         self.circleView.circleColor = self.circleColor;
     }];
-    [self performSelector:@selector(longTimeNoTouch) withObject:nil afterDelay:4];
+    [self performSelector:@selector(longTimeNoTouch) withObject:nil afterDelay:kSleepSecond];
 }
 
 @end

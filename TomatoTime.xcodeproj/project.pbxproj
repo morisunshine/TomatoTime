@@ -1,553 +1,1428 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		082D158F194B2B1A00A23812 /* UIView+addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 082D158E194B2B1A00A23812 /* UIView+addition.m */; };
-		082D1593194B346000A23812 /* TTInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 082D1591194B346000A23812 /* TTInfoViewController.m */; };
-		082D1594194B346000A23812 /* TTInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 082D1592194B346000A23812 /* TTInfoViewController.xib */; };
-		08909C7F19225D7D0070A3B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C7E19225D7D0070A3B4 /* Foundation.framework */; };
-		08909C8119225D7D0070A3B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C8019225D7D0070A3B4 /* CoreGraphics.framework */; };
-		08909C8319225D7D0070A3B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C8219225D7D0070A3B4 /* UIKit.framework */; };
-		08909C8919225D7D0070A3B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08909C8719225D7D0070A3B4 /* InfoPlist.strings */; };
-		08909C8B19225D7D0070A3B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08909C8A19225D7D0070A3B4 /* main.m */; };
-		08909C8F19225D7D0070A3B4 /* TTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08909C8E19225D7D0070A3B4 /* TTAppDelegate.m */; };
-		08909C9219225D7D0070A3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08909C9019225D7D0070A3B4 /* Main.storyboard */; };
-		08909C9719225D7D0070A3B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08909C9619225D7D0070A3B4 /* Images.xcassets */; };
-		08909C9E19225D7D0070A3B4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C9D19225D7D0070A3B4 /* XCTest.framework */; };
-		08909C9F19225D7D0070A3B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C7E19225D7D0070A3B4 /* Foundation.framework */; };
-		08909CA019225D7D0070A3B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08909C8219225D7D0070A3B4 /* UIKit.framework */; };
-		08909CA819225D7D0070A3B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08909CA619225D7D0070A3B4 /* InfoPlist.strings */; };
-		08909CAA19225D7D0070A3B4 /* TomatoTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08909CA919225D7D0070A3B4 /* TomatoTimeTests.m */; };
-		08909CB71922627F0070A3B4 /* TTCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08909CB61922627F0070A3B4 /* TTCircleView.m */; };
-		08EB7F72192B9BDE00B8A110 /* TTProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EB7F71192B9BDE00B8A110 /* TTProgressView.m */; };
-		08EB7F78192CE12300B8A110 /* TTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EB7F77192CE12300B8A110 /* TTMainViewController.m */; };
-		08FE22B8194968B000840623 /* TTStartMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE22B7194968B000840623 /* TTStartMainView.m */; };
-		08FE22BB19496DC900840623 /* TTTomatoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE22BA19496DC900840623 /* TTTomatoView.m */; };
-		08FE22C1194ABE8800840623 /* TTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE22C0194ABE8800840623 /* TTBaseView.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		08909CA119225D7D0070A3B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 08909C7319225D7D0070A3B4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 08909C7A19225D7D0070A3B4;
-			remoteInfo = TomatoTime;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		082D158C194B2B1A00A23812 /* CONSTANT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONSTANT.h; sourceTree = "<group>"; };
-		082D158D194B2B1A00A23812 /* UIView+addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+addition.h"; sourceTree = "<group>"; };
-		082D158E194B2B1A00A23812 /* UIView+addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+addition.m"; sourceTree = "<group>"; };
-		082D1590194B346000A23812 /* TTInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTInfoViewController.h; sourceTree = "<group>"; };
-		082D1591194B346000A23812 /* TTInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTInfoViewController.m; sourceTree = "<group>"; };
-		082D1592194B346000A23812 /* TTInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTInfoViewController.xib; sourceTree = "<group>"; };
-		08909C7B19225D7D0070A3B4 /* TomatoTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		08909C7E19225D7D0070A3B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		08909C8019225D7D0070A3B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		08909C8219225D7D0070A3B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		08909C8619225D7D0070A3B4 /* TomatoTime-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TomatoTime-Info.plist"; sourceTree = "<group>"; };
-		08909C8819225D7D0070A3B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		08909C8A19225D7D0070A3B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		08909C8C19225D7D0070A3B4 /* TomatoTime-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TomatoTime-Prefix.pch"; sourceTree = "<group>"; };
-		08909C8D19225D7D0070A3B4 /* TTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAppDelegate.h; sourceTree = "<group>"; };
-		08909C8E19225D7D0070A3B4 /* TTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAppDelegate.m; sourceTree = "<group>"; };
-		08909C9119225D7D0070A3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		08909C9619225D7D0070A3B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		08909C9C19225D7D0070A3B4 /* TomatoTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		08909C9D19225D7D0070A3B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		08909CA519225D7D0070A3B4 /* TomatoTimeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TomatoTimeTests-Info.plist"; sourceTree = "<group>"; };
-		08909CA719225D7D0070A3B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		08909CA919225D7D0070A3B4 /* TomatoTimeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TomatoTimeTests.m; sourceTree = "<group>"; };
-		08909CB51922627F0070A3B4 /* TTCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCircleView.h; sourceTree = "<group>"; };
-		08909CB61922627F0070A3B4 /* TTCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCircleView.m; sourceTree = "<group>"; };
-		08EB7F70192B9BDE00B8A110 /* TTProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTProgressView.h; sourceTree = "<group>"; };
-		08EB7F71192B9BDE00B8A110 /* TTProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTProgressView.m; sourceTree = "<group>"; };
-		08EB7F76192CE12300B8A110 /* TTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMainViewController.h; sourceTree = "<group>"; };
-		08EB7F77192CE12300B8A110 /* TTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMainViewController.m; sourceTree = "<group>"; };
-		08FE22B6194968B000840623 /* TTStartMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTStartMainView.h; sourceTree = "<group>"; };
-		08FE22B7194968B000840623 /* TTStartMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTStartMainView.m; sourceTree = "<group>"; };
-		08FE22B919496DC900840623 /* TTTomatoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTomatoView.h; sourceTree = "<group>"; };
-		08FE22BA19496DC900840623 /* TTTomatoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTomatoView.m; sourceTree = "<group>"; };
-		08FE22BF194ABE8800840623 /* TTBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBaseView.h; sourceTree = "<group>"; };
-		08FE22C0194ABE8800840623 /* TTBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseView.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		08909C7819225D7D0070A3B4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08909C8119225D7D0070A3B4 /* CoreGraphics.framework in Frameworks */,
-				08909C8319225D7D0070A3B4 /* UIKit.framework in Frameworks */,
-				08909C7F19225D7D0070A3B4 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		08909C9919225D7D0070A3B4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08909C9E19225D7D0070A3B4 /* XCTest.framework in Frameworks */,
-				08909CA019225D7D0070A3B4 /* UIKit.framework in Frameworks */,
-				08909C9F19225D7D0070A3B4 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		082D158B194B2B1A00A23812 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				082D158C194B2B1A00A23812 /* CONSTANT.h */,
-				082D158D194B2B1A00A23812 /* UIView+addition.h */,
-				082D158E194B2B1A00A23812 /* UIView+addition.m */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		08909C7219225D7D0070A3B4 = {
-			isa = PBXGroup;
-			children = (
-				08909C8419225D7D0070A3B4 /* TomatoTime */,
-				08909CA319225D7D0070A3B4 /* TomatoTimeTests */,
-				08909C7D19225D7D0070A3B4 /* Frameworks */,
-				08909C7C19225D7D0070A3B4 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		08909C7C19225D7D0070A3B4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				08909C7B19225D7D0070A3B4 /* TomatoTime.app */,
-				08909C9C19225D7D0070A3B4 /* TomatoTimeTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		08909C7D19225D7D0070A3B4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				08909C7E19225D7D0070A3B4 /* Foundation.framework */,
-				08909C8019225D7D0070A3B4 /* CoreGraphics.framework */,
-				08909C8219225D7D0070A3B4 /* UIKit.framework */,
-				08909C9D19225D7D0070A3B4 /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		08909C8419225D7D0070A3B4 /* TomatoTime */ = {
-			isa = PBXGroup;
-			children = (
-				082D158B194B2B1A00A23812 /* Common */,
-				08909CB3192262730070A3B4 /* View */,
-				08909CB4192262730070A3B4 /* ViewController */,
-				08909C8D19225D7D0070A3B4 /* TTAppDelegate.h */,
-				08909C8E19225D7D0070A3B4 /* TTAppDelegate.m */,
-				08909C9019225D7D0070A3B4 /* Main.storyboard */,
-				08909C9619225D7D0070A3B4 /* Images.xcassets */,
-				08909C8519225D7D0070A3B4 /* Supporting Files */,
-			);
-			path = TomatoTime;
-			sourceTree = "<group>";
-		};
-		08909C8519225D7D0070A3B4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				08909C8619225D7D0070A3B4 /* TomatoTime-Info.plist */,
-				08909C8719225D7D0070A3B4 /* InfoPlist.strings */,
-				08909C8A19225D7D0070A3B4 /* main.m */,
-				08909C8C19225D7D0070A3B4 /* TomatoTime-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		08909CA319225D7D0070A3B4 /* TomatoTimeTests */ = {
-			isa = PBXGroup;
-			children = (
-				08909CA919225D7D0070A3B4 /* TomatoTimeTests.m */,
-				08909CA419225D7D0070A3B4 /* Supporting Files */,
-			);
-			path = TomatoTimeTests;
-			sourceTree = "<group>";
-		};
-		08909CA419225D7D0070A3B4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				08909CA519225D7D0070A3B4 /* TomatoTimeTests-Info.plist */,
-				08909CA619225D7D0070A3B4 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		08909CB3192262730070A3B4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				08909CB51922627F0070A3B4 /* TTCircleView.h */,
-				08909CB61922627F0070A3B4 /* TTCircleView.m */,
-				08EB7F70192B9BDE00B8A110 /* TTProgressView.h */,
-				08EB7F71192B9BDE00B8A110 /* TTProgressView.m */,
-				08FE22B6194968B000840623 /* TTStartMainView.h */,
-				08FE22B7194968B000840623 /* TTStartMainView.m */,
-				08FE22B919496DC900840623 /* TTTomatoView.h */,
-				08FE22BA19496DC900840623 /* TTTomatoView.m */,
-				08FE22BF194ABE8800840623 /* TTBaseView.h */,
-				08FE22C0194ABE8800840623 /* TTBaseView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		08909CB4192262730070A3B4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				08EB7F76192CE12300B8A110 /* TTMainViewController.h */,
-				08EB7F77192CE12300B8A110 /* TTMainViewController.m */,
-				082D1590194B346000A23812 /* TTInfoViewController.h */,
-				082D1591194B346000A23812 /* TTInfoViewController.m */,
-				082D1592194B346000A23812 /* TTInfoViewController.xib */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		08909C7A19225D7D0070A3B4 /* TomatoTime */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 08909CAD19225D7D0070A3B4 /* Build configuration list for PBXNativeTarget "TomatoTime" */;
-			buildPhases = (
-				08909C7719225D7D0070A3B4 /* Sources */,
-				08909C7819225D7D0070A3B4 /* Frameworks */,
-				08909C7919225D7D0070A3B4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TomatoTime;
-			productName = TomatoTime;
-			productReference = 08909C7B19225D7D0070A3B4 /* TomatoTime.app */;
-			productType = "com.apple.product-type.application";
-		};
-		08909C9B19225D7D0070A3B4 /* TomatoTimeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 08909CB019225D7D0070A3B4 /* Build configuration list for PBXNativeTarget "TomatoTimeTests" */;
-			buildPhases = (
-				08909C9819225D7D0070A3B4 /* Sources */,
-				08909C9919225D7D0070A3B4 /* Frameworks */,
-				08909C9A19225D7D0070A3B4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				08909CA219225D7D0070A3B4 /* PBXTargetDependency */,
-			);
-			name = TomatoTimeTests;
-			productName = TomatoTimeTests;
-			productReference = 08909C9C19225D7D0070A3B4 /* TomatoTimeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		08909C7319225D7D0070A3B4 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = TT;
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = Sheldon;
-				TargetAttributes = {
-					08909C7A19225D7D0070A3B4 = {
-						DevelopmentTeam = 8YE95NG7ZZ;
-					};
-					08909C9B19225D7D0070A3B4 = {
-						TestTargetID = 08909C7A19225D7D0070A3B4;
-					};
-				};
-			};
-			buildConfigurationList = 08909C7619225D7D0070A3B4 /* Build configuration list for PBXProject "TomatoTime" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 08909C7219225D7D0070A3B4;
-			productRefGroup = 08909C7C19225D7D0070A3B4 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				08909C7A19225D7D0070A3B4 /* TomatoTime */,
-				08909C9B19225D7D0070A3B4 /* TomatoTimeTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		08909C7919225D7D0070A3B4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				082D1594194B346000A23812 /* TTInfoViewController.xib in Resources */,
-				08909C9719225D7D0070A3B4 /* Images.xcassets in Resources */,
-				08909C8919225D7D0070A3B4 /* InfoPlist.strings in Resources */,
-				08909C9219225D7D0070A3B4 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		08909C9A19225D7D0070A3B4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08909CA819225D7D0070A3B4 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		08909C7719225D7D0070A3B4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08909C8F19225D7D0070A3B4 /* TTAppDelegate.m in Sources */,
-				08909C8B19225D7D0070A3B4 /* main.m in Sources */,
-				08FE22BB19496DC900840623 /* TTTomatoView.m in Sources */,
-				08FE22B8194968B000840623 /* TTStartMainView.m in Sources */,
-				08909CB71922627F0070A3B4 /* TTCircleView.m in Sources */,
-				08FE22C1194ABE8800840623 /* TTBaseView.m in Sources */,
-				082D1593194B346000A23812 /* TTInfoViewController.m in Sources */,
-				08EB7F72192B9BDE00B8A110 /* TTProgressView.m in Sources */,
-				08EB7F78192CE12300B8A110 /* TTMainViewController.m in Sources */,
-				082D158F194B2B1A00A23812 /* UIView+addition.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		08909C9819225D7D0070A3B4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08909CAA19225D7D0070A3B4 /* TomatoTimeTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		08909CA219225D7D0070A3B4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 08909C7A19225D7D0070A3B4 /* TomatoTime */;
-			targetProxy = 08909CA119225D7D0070A3B4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		08909C8719225D7D0070A3B4 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08909C8819225D7D0070A3B4 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		08909C9019225D7D0070A3B4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08909C9119225D7D0070A3B4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		08909CA619225D7D0070A3B4 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08909CA719225D7D0070A3B4 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		08909CAB19225D7D0070A3B4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		08909CAC19225D7D0070A3B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		08909CAE19225D7D0070A3B4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TomatoTime/TomatoTime-Prefix.pch";
-				INFOPLIST_FILE = "TomatoTime/TomatoTime-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		08909CAF19225D7D0070A3B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TomatoTime/TomatoTime-Prefix.pch";
-				INFOPLIST_FILE = "TomatoTime/TomatoTime-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		08909CB119225D7D0070A3B4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TomatoTime.app/TomatoTime";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TomatoTime/TomatoTime-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "TomatoTimeTests/TomatoTimeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		08909CB219225D7D0070A3B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TomatoTime.app/TomatoTime";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TomatoTime/TomatoTime-Prefix.pch";
-				INFOPLIST_FILE = "TomatoTimeTests/TomatoTimeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		08909C7619225D7D0070A3B4 /* Build configuration list for PBXProject "TomatoTime" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				08909CAB19225D7D0070A3B4 /* Debug */,
-				08909CAC19225D7D0070A3B4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		08909CAD19225D7D0070A3B4 /* Build configuration list for PBXNativeTarget "TomatoTime" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				08909CAE19225D7D0070A3B4 /* Debug */,
-				08909CAF19225D7D0070A3B4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		08909CB019225D7D0070A3B4 /* Build configuration list for PBXNativeTarget "TomatoTimeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				08909CB119225D7D0070A3B4 /* Debug */,
-				08909CB219225D7D0070A3B4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 08909C7319225D7D0070A3B4 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>082D158B194B2B1A00A23812</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>082D158C194B2B1A00A23812</string>
+				<string>082D158D194B2B1A00A23812</string>
+				<string>082D158E194B2B1A00A23812</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Common</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>082D158C194B2B1A00A23812</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>CONSTANT.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>082D158D194B2B1A00A23812</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>UIView+addition.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>082D158E194B2B1A00A23812</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>UIView+addition.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>082D158F194B2B1A00A23812</key>
+		<dict>
+			<key>fileRef</key>
+			<string>082D158E194B2B1A00A23812</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>082D1590194B346000A23812</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TTInfoViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>082D1591194B346000A23812</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TTInfoViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>082D1592194B346000A23812</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>TTInfoViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>082D1593194B346000A23812</key>
+		<dict>
+			<key>fileRef</key>
+			<string>082D1591194B346000A23812</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>082D1594194B346000A23812</key>
+		<dict>
+			<key>fileRef</key>
+			<string>082D1592194B346000A23812</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909C7219225D7D0070A3B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>08909C8419225D7D0070A3B4</string>
+				<string>08909CA319225D7D0070A3B4</string>
+				<string>08909C7D19225D7D0070A3B4</string>
+				<string>08909C7C19225D7D0070A3B4</string>
+				<string>0DFB95E44F11479CB824FB70</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C7319225D7D0070A3B4</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>TT</string>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Sheldon</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>08909C7A19225D7D0070A3B4</key>
+					<dict>
+						<key>DevelopmentTeam</key>
+						<string>8YE95NG7ZZ</string>
+					</dict>
+					<key>08909C9B19225D7D0070A3B4</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>08909C7A19225D7D0070A3B4</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>08909C7619225D7D0070A3B4</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>08909C7219225D7D0070A3B4</string>
+			<key>productRefGroup</key>
+			<string>08909C7C19225D7D0070A3B4</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>08909C7A19225D7D0070A3B4</string>
+				<string>08909C9B19225D7D0070A3B4</string>
+			</array>
+		</dict>
+		<key>08909C7619225D7D0070A3B4</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>08909CAB19225D7D0070A3B4</string>
+				<string>08909CAC19225D7D0070A3B4</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>08909C7719225D7D0070A3B4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>08909C8F19225D7D0070A3B4</string>
+				<string>08909C8B19225D7D0070A3B4</string>
+				<string>08FE22BB19496DC900840623</string>
+				<string>08FE22B8194968B000840623</string>
+				<string>08909CB71922627F0070A3B4</string>
+				<string>08FE22C1194ABE8800840623</string>
+				<string>082D1593194B346000A23812</string>
+				<string>08EB7F72192B9BDE00B8A110</string>
+				<string>08EB7F78192CE12300B8A110</string>
+				<string>082D158F194B2B1A00A23812</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>08909C7819225D7D0070A3B4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>08909C8119225D7D0070A3B4</string>
+				<string>08909C8319225D7D0070A3B4</string>
+				<string>08909C7F19225D7D0070A3B4</string>
+				<string>46096CED0B4C4854A5FEF40B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>08909C7919225D7D0070A3B4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>082D1594194B346000A23812</string>
+				<string>08909C9719225D7D0070A3B4</string>
+				<string>08909C8919225D7D0070A3B4</string>
+				<string>08909C9219225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>08909C7A19225D7D0070A3B4</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>08909CAD19225D7D0070A3B4</string>
+			<key>buildPhases</key>
+			<array>
+				<string>94DA21E825D948D3BAEC34DB</string>
+				<string>08909C7719225D7D0070A3B4</string>
+				<string>08909C7819225D7D0070A3B4</string>
+				<string>08909C7919225D7D0070A3B4</string>
+				<string>6C5607CB71734425A06D7F3F</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TomatoTime</string>
+			<key>productName</key>
+			<string>TomatoTime</string>
+			<key>productReference</key>
+			<string>08909C7B19225D7D0070A3B4</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>08909C7B19225D7D0070A3B4</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TomatoTime.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>08909C7C19225D7D0070A3B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>08909C7B19225D7D0070A3B4</string>
+				<string>08909C9C19225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C7D19225D7D0070A3B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>08909C7E19225D7D0070A3B4</string>
+				<string>08909C8019225D7D0070A3B4</string>
+				<string>08909C8219225D7D0070A3B4</string>
+				<string>08909C9D19225D7D0070A3B4</string>
+				<string>F16DE38BC9C849B998DFD150</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C7E19225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>08909C7F19225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909C7E19225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909C8019225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>08909C8119225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909C8019225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909C8219225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>08909C8319225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909C8219225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909C8419225D7D0070A3B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>082D158B194B2B1A00A23812</string>
+				<string>08909CB3192262730070A3B4</string>
+				<string>08909CB4192262730070A3B4</string>
+				<string>08909C8D19225D7D0070A3B4</string>
+				<string>08909C8E19225D7D0070A3B4</string>
+				<string>08909C9019225D7D0070A3B4</string>
+				<string>08909C9619225D7D0070A3B4</string>
+				<string>08909C8519225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TomatoTime</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C8519225D7D0070A3B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>08909C8619225D7D0070A3B4</string>
+				<string>08909C8719225D7D0070A3B4</string>
+				<string>08909C8A19225D7D0070A3B4</string>
+				<string>08909C8C19225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C8619225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>TomatoTime-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C8719225D7D0070A3B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>08909C8819225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C8819225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C8919225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909C8719225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909C8A19225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C8B19225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909C8A19225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909C8C19225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TomatoTime-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C8D19225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TTAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C8E19225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TTAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C8F19225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909C8E19225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909C9019225D7D0070A3B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>08909C9119225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C9119225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C9219225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909C9019225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909C9619225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909C9719225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909C9619225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909C9819225D7D0070A3B4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>08909CAA19225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>08909C9919225D7D0070A3B4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>08909C9E19225D7D0070A3B4</string>
+				<string>08909CA019225D7D0070A3B4</string>
+				<string>08909C9F19225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>08909C9A19225D7D0070A3B4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>08909CA819225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>08909C9B19225D7D0070A3B4</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>08909CB019225D7D0070A3B4</string>
+			<key>buildPhases</key>
+			<array>
+				<string>08909C9819225D7D0070A3B4</string>
+				<string>08909C9919225D7D0070A3B4</string>
+				<string>08909C9A19225D7D0070A3B4</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>08909CA219225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TomatoTimeTests</string>
+			<key>productName</key>
+			<string>TomatoTimeTests</string>
+			<key>productReference</key>
+			<string>08909C9C19225D7D0070A3B4</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>08909C9C19225D7D0070A3B4</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TomatoTimeTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>08909C9D19225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>08909C9E19225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909C9D19225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909C9F19225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909C7E19225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909CA019225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909C8219225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909CA119225D7D0070A3B4</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>08909C7319225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>08909C7A19225D7D0070A3B4</string>
+			<key>remoteInfo</key>
+			<string>TomatoTime</string>
+		</dict>
+		<key>08909CA219225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>08909C7A19225D7D0070A3B4</string>
+			<key>targetProxy</key>
+			<string>08909CA119225D7D0070A3B4</string>
+		</dict>
+		<key>08909CA319225D7D0070A3B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>08909CA919225D7D0070A3B4</string>
+				<string>08909CA419225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TomatoTimeTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909CA419225D7D0070A3B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>08909CA519225D7D0070A3B4</string>
+				<string>08909CA619225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909CA519225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>TomatoTimeTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909CA619225D7D0070A3B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>08909CA719225D7D0070A3B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909CA719225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909CA819225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909CA619225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909CA919225D7D0070A3B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TomatoTimeTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909CAA19225D7D0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909CA919225D7D0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08909CAB19225D7D0070A3B4</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>08909CAC19225D7D0070A3B4</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>08909CAD19225D7D0070A3B4</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>08909CAE19225D7D0070A3B4</string>
+				<string>08909CAF19225D7D0070A3B4</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>08909CAE19225D7D0070A3B4</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0DFB95E44F11479CB824FB70</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>TomatoTime/TomatoTime-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TomatoTime/TomatoTime-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.0</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>08909CAF19225D7D0070A3B4</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0DFB95E44F11479CB824FB70</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>TomatoTime/TomatoTime-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TomatoTime/TomatoTime-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.0</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>08909CB019225D7D0070A3B4</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>08909CB119225D7D0070A3B4</string>
+				<string>08909CB219225D7D0070A3B4</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>08909CB119225D7D0070A3B4</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/TomatoTime.app/TomatoTime</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>TomatoTime/TomatoTime-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>TomatoTimeTests/TomatoTimeTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>08909CB219225D7D0070A3B4</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/TomatoTime.app/TomatoTime</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>TomatoTime/TomatoTime-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TomatoTimeTests/TomatoTimeTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>08909CB3192262730070A3B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>08909CB51922627F0070A3B4</string>
+				<string>08909CB61922627F0070A3B4</string>
+				<string>08EB7F70192B9BDE00B8A110</string>
+				<string>08EB7F71192B9BDE00B8A110</string>
+				<string>08FE22B6194968B000840623</string>
+				<string>08FE22B7194968B000840623</string>
+				<string>08FE22B919496DC900840623</string>
+				<string>08FE22BA19496DC900840623</string>
+				<string>08FE22BF194ABE8800840623</string>
+				<string>08FE22C0194ABE8800840623</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>View</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909CB4192262730070A3B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>08EB7F76192CE12300B8A110</string>
+				<string>08EB7F77192CE12300B8A110</string>
+				<string>082D1590194B346000A23812</string>
+				<string>082D1591194B346000A23812</string>
+				<string>082D1592194B346000A23812</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ViewController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909CB51922627F0070A3B4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TTCircleView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909CB61922627F0070A3B4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TTCircleView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08909CB71922627F0070A3B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08909CB61922627F0070A3B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08EB7F70192B9BDE00B8A110</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TTProgressView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08EB7F71192B9BDE00B8A110</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TTProgressView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08EB7F72192B9BDE00B8A110</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08EB7F71192B9BDE00B8A110</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08EB7F76192CE12300B8A110</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TTMainViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08EB7F77192CE12300B8A110</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TTMainViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08EB7F78192CE12300B8A110</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08EB7F77192CE12300B8A110</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08FE22B6194968B000840623</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TTStartMainView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08FE22B7194968B000840623</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TTStartMainView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08FE22B8194968B000840623</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08FE22B7194968B000840623</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08FE22B919496DC900840623</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TTTomatoView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08FE22BA19496DC900840623</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TTTomatoView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08FE22BB19496DC900840623</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08FE22BA19496DC900840623</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08FE22BF194ABE8800840623</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TTBaseView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08FE22C0194ABE8800840623</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TTBaseView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08FE22C1194ABE8800840623</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08FE22C0194ABE8800840623</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0DFB95E44F11479CB824FB70</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>46096CED0B4C4854A5FEF40B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F16DE38BC9C849B998DFD150</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6C5607CB71734425A06D7F3F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>94DA21E825D948D3BAEC34DB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>F16DE38BC9C849B998DFD150</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>08909C7319225D7D0070A3B4</string>
+</dict>
+</plist>
