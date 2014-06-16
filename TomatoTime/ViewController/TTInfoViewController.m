@@ -55,8 +55,8 @@
     startAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewFrame];
     startAnimation.fromValue = [NSValue valueWithCGRect:fromRect];
     startAnimation.toValue = [NSValue valueWithCGRect:toRect];
-    startAnimation.springBounciness = 20.0;
-    startAnimation.springSpeed = 20.0;
+    startAnimation.springBounciness = 8.0;
+    startAnimation.springSpeed = 15.0;
     
     [self.alertBackgroundView pop_addAnimation:startAnimation forKey:@"ZoomIn"];
 }
@@ -98,6 +98,8 @@
 {
     [UIView animateWithDuration:0.2 animations:^{
         self.alphaBackgroundView.alpha = 0;
+        self.alertView.alpha = 0;
+        self.cancelBtn.alpha = 0;
     }];
     
     CGRect toRect = CGRectMake(15, APP_SCREEN_HEIGHT - 15, 0, 0);
