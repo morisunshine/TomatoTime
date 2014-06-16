@@ -26,6 +26,7 @@
 @property (nonatomic, retain) NSString *titleString;
 @property (nonatomic, copy) void(^endHandler)();
 @property (nonatomic, copy) void(^endTapHandler)();
+@property (nonatomic, copy) void(^giveUpHandler)();
 
 - (id)initWithFrame:(CGRect)frame maxMinute:(NSInteger)maxMinute;
 

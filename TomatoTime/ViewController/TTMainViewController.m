@@ -79,6 +79,10 @@
         __block TTTomatoView *weakTomatoView = _tomatoView;
         __weak TTMainViewController *weakSelf = self;
         
+        _tomatoView.giveUpHandler = ^() {
+            [weakSelf giveUpTomato];
+        };
+        
         _tomatoView.endHandler = ^() {
             NSLog(@"可以休息了！");
             weakTomatoView.titleString = @"点击开始休息";
@@ -101,6 +105,11 @@
         
         __block TTTomatoView *weakRestView = _resetView;
         __weak TTMainViewController *weakSelf = self;
+        
+        
+        _resetView.giveUpHandler = ^() {
+            [weakSelf giveUpTomato];
+        };
         
         _resetView.endHandler = ^() {
             weakRestView.titleString = @"完成";
@@ -174,6 +183,25 @@
     TTInfoViewController *infoViewController = [[TTInfoViewController alloc] init];
     [self addChildViewController:infoViewController];
     [self.view addSubview:infoViewController.view];
+}
+
+#pragma mark - Privat Methods -
+
+- (void)giveUpTomato
+{
+    if (self.tomatoView) {
+        [self.tomatoView removeFromSuperview];
+        self.tomatoView = nil;
+    }
+    
+    if (self.resetView) {
+        [self.resetView removeFromSuperview];
+        self.resetView = nil;
+    }
+    
+    [self.view insertSubview:self.startMainView belowSubview:self.infoBtn];
+    self.infoBtn.hidden = YES;
+    self.countBtn.hidden = YES;
 }
 
 @end

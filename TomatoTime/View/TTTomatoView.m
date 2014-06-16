@@ -49,6 +49,10 @@
     [runloop addTimer:timer_ forMode:NSDefaultRunLoopMode];
     [timer_ fire];
     
+    UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAction:)];
+    longPressGestureRecognizer.minimumPressDuration = 3;
+    [self.circleView addGestureRecognizer:longPressGestureRecognizer];
+    
     [self performSelector:@selector(longTimeNoTouch) withObject:nil afterDelay:kSleepSecond];
 }
 
@@ -147,6 +151,9 @@
 {
     if (sender.state == UIGestureRecognizerStateBegan) {
         NSLog(@"开始");
+        if (self.giveUpHandler) {
+            self.giveUpHandler();
+        }
     }
 }
 
