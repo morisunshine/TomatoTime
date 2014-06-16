@@ -44,7 +44,7 @@
 {
     [super viewWillAppear:animated];
     
-    CGRect fromRect = CGRectMake(APP_SCREEN_WIDTH / 2, APP_SCREEN_HEIGHT / 2, 28.4, 42.7);
+    CGRect fromRect = CGRectMake(0, APP_SCREEN_HEIGHT, 28.4, 42.7);
     CGRect toRect = self.alertBackgroundView.frame;
     
     [UIView animateWithDuration:0.2 animations:^{
@@ -98,7 +98,7 @@
 
 - (IBAction)cancelBtnTapped:(UIButton *)sender
 {
-    CGRect toRect = CGRectMake(APP_SCREEN_WIDTH / 2, APP_SCREEN_HEIGHT / 2, 0, 0);
+    CGRect toRect = CGRectMake(0, APP_SCREEN_HEIGHT, 0, 0);
     CGRect fromRect = self.alertBackgroundView.frame;
     
     POPSpringAnimation *startAnimation = [POPSpringAnimation animation];
