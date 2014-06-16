@@ -35,6 +35,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor clearColor];
+    self.view.alpha = 0;
     
     [self setupView];
     // Do any additional setup after loading the view from its nib.
@@ -49,6 +50,7 @@
     
     [UIView animateWithDuration:0.2 animations:^{
         self.alphaBackgroundView.alpha = 0.7;
+        self.view.alpha = 1;
     }];
     
     POPSpringAnimation *startAnimation = [POPSpringAnimation animation];
