@@ -44,7 +44,7 @@
 {
     [super viewWillAppear:animated];
     
-    CGRect fromRect = CGRectMake(0, APP_SCREEN_HEIGHT, 28.4, 42.7);
+    CGRect fromRect = CGRectMake(15, APP_SCREEN_HEIGHT - 15, 28.4, 42.7);
     CGRect toRect = self.alertBackgroundView.frame;
     
     [UIView animateWithDuration:0.2 animations:^{
@@ -57,9 +57,6 @@
     startAnimation.toValue = [NSValue valueWithCGRect:toRect];
     startAnimation.springBounciness = 20.0;
     startAnimation.springSpeed = 20.0;
-    startAnimation.completionBlock = ^(POPAnimation *animation, BOOL finish) {
-        
-    };
     
     [self.alertBackgroundView pop_addAnimation:startAnimation forKey:@"ZoomIn"];
 }
@@ -83,6 +80,7 @@
     self.alertView.layer.masksToBounds = YES;
     self.feedBackBtn.layer.cornerRadius = 6.0;
     self.rateBtn.layer.cornerRadius = 6.0;
+    self.cancelBtn.layer.cornerRadius = 11.0;
     
     CGRect alertRect = self.alertView.frame;
     
@@ -98,7 +96,11 @@
 
 - (IBAction)cancelBtnTapped:(UIButton *)sender
 {
-    CGRect toRect = CGRectMake(0, APP_SCREEN_HEIGHT, 0, 0);
+    [UIView animateWithDuration:0.2 animations:^{
+        self.alphaBackgroundView.alpha = 0;
+    }];
+    
+    CGRect toRect = CGRectMake(15, APP_SCREEN_HEIGHT - 15, 0, 0);
     CGRect fromRect = self.alertBackgroundView.frame;
     
     POPSpringAnimation *startAnimation = [POPSpringAnimation animation];
