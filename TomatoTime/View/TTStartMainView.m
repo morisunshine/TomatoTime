@@ -64,20 +64,9 @@
 
 - (IBAction)startToTomato:(UITapGestureRecognizer *)sender
 {
-    POPSpringAnimation *startAnimation = [POPSpringAnimation animation];
-    startAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewCenter];
-    startAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(APP_SCREEN_WIDTH / 2, APP_SCREEN_HEIGHT / 2)];
-    startAnimation.springBounciness = 20.0;
-    startAnimation.springSpeed = 20.0;
-    startAnimation.completionBlock = ^(POPAnimation *animation, BOOL finish) {
-        if (finish) {
-            if (self.handler) {
-                self.handler();
-            }
-        }
-    };
-    
-    [self.circleView pop_addAnimation:startAnimation forKey:@"pop"];
+    if (self.handler) {
+        self.handler();
+    }
 }
 
 /*

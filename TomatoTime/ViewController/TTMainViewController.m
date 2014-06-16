@@ -9,6 +9,7 @@
 #import "TTMainViewController.h"
 #import "TTStartMainView.h"
 #import "TTTomatoView.h"
+#import "TTCircleView.h"
 #import "TTInfoViewController.h"
 
 @interface TTMainViewController ()
@@ -17,6 +18,7 @@
 @property (nonatomic, retain) TTTomatoView *tomatoView;
 @property (nonatomic, retain) TTTomatoView *resetView;
 @property (nonatomic, retain) UIButton *infoBtn;
+@property (nonatomic, retain) UIButton *countBtn;
 
 @end
 
@@ -37,6 +39,7 @@
     
     [self.view addSubview:self.startMainView];
     [self.view addSubview:self.infoBtn];
+    [self.view addSubview:self.countBtn];
     // Do any additional setup after loading the view.
 }
 
@@ -57,6 +60,7 @@
         _startMainView.handler = ^() {
             NSLog(@"Start!");
             weakSelf.infoBtn.hidden = NO;
+            weakSelf.countBtn.hidden = NO;
             [weakSelf.view insertSubview:weakSelf.tomatoView belowSubview:weakSelf.infoBtn];
             [weakStartMainView removeFromSuperview];
             _startMainView = nil;
@@ -103,11 +107,28 @@
         };
         
         _resetView.endTapHandler = ^() {
-            NSLog(@"完成后的操作");
-            [weakRestView removeFromSuperview];
-            _resetView = nil;
-            weakSelf.infoBtn.hidden = YES;
-            [weakSelf.view insertSubview:weakSelf.startMainView belowSubview:weakSelf.infoBtn];
+            
+            CGRect toRect = weakSelf.countBtn.frame;
+            CGRect fromRect = weakRestView.circleView.frame;
+            
+            POPSpringAnimation *zoomOutAnimation = [POPSpringAnimation animation];
+            zoomOutAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewFrame];
+            zoomOutAnimation.fromValue = [NSValue valueWithCGRect:fromRect];
+            zoomOutAnimation.toValue = [NSValue valueWithCGRect:toRect];
+            zoomOutAnimation.springBounciness = 10.0;
+            zoomOutAnimation.springSpeed = 10.0;
+            zoomOutAnimation.completionBlock = ^(POPAnimation *animation, BOOL finish) {
+                if (finish) {
+                    NSLog(@"完成后的操作");
+                    [weakRestView removeFromSuperview];
+                    _resetView = nil;
+                    weakSelf.infoBtn.hidden = YES;
+                    weakSelf.countBtn.hidden = YES;
+                    [weakSelf.view insertSubview:weakSelf.startMainView belowSubview:weakSelf.infoBtn];
+                }
+            };
+            
+            [weakSelf.resetView.circleView pop_addAnimation:zoomOutAnimation forKey:@"ZoomOut"];
         };
     }
     
@@ -120,12 +141,30 @@
         _infoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_infoBtn setImage:[UIImage imageNamed:@"btn_info"] forState:UIControlStateNormal];
         _infoBtn.hidden = YES;
-        _infoBtn.frame = CGRectMake(15, 0, 33, 33);
+        _infoBtn.frame = CGRectMake(15, 0, 32, 32);
         _infoBtn.bottom = APP_SCREEN_HEIGHT - 15;
         [_infoBtn addTarget:self action:@selector(infoBtnTapped:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return _infoBtn;
+}
+
+
+- (UIButton *)countBtn
+{
+    if (!_countBtn) {
+        _countBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _countBtn.hidden = YES;
+        _countBtn.layer.cornerRadius = 11;
+        _countBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+        _countBtn.backgroundColor = [UIColor colorWithRed:0.87 green:0.31 blue:0.23 alpha:1];
+        _countBtn.frame = CGRectMake(15, 0, 22, 22);
+        _countBtn.bottom = APP_SCREEN_HEIGHT - 20;
+        _countBtn.right = APP_SCREEN_WIDTH - 15;
+        [_countBtn setTitle:@"0" forState:UIControlStateNormal];
+    }
+    
+    return _countBtn;
 }
 
 #pragma mark - Actions -
