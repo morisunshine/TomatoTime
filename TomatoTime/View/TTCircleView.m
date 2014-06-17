@@ -57,13 +57,14 @@ NSInteger const kCircleLineWidth = 4;
 - (UILabel *)titleLabel
 {
     if (!_titleLabel) {
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,
-                                                                0 + CGRectGetHeight(self.bounds) / 2 - 20,
-                                                                CGRectGetWidth(self.bounds),
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10,
+                                                                0 + self.height / 2 - 20,
+                                                                self.width - 20,
                                                                 40)];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.font = FONTSIZE(30);
         _titleLabel.textColor = [UIColor colorWithRed:0.41 green:0.41 blue:0.41 alpha:1];
+        _titleLabel.adjustsFontSizeToFitWidth = YES;
     }
     
     return _titleLabel;
@@ -177,7 +178,6 @@ NSInteger const kCircleLineWidth = 4;
     _titleString = titleString;
     
     self.titleLabel.text = titleString;
-    self.titleLabel.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)setTitleColor:(UIColor *)titleColor
