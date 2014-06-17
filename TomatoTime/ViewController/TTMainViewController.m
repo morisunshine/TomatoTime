@@ -59,8 +59,6 @@
         _startMainView = [[TTStartMainView alloc] initWithFrame:self.view.bounds];
         _startMainView.handler = ^() {
             NSLog(@"Start!");
-            weakSelf.infoBtn.hidden = NO;
-            weakSelf.countBtn.hidden = NO;
             [weakSelf.view insertSubview:weakSelf.tomatoView belowSubview:weakSelf.infoBtn];
             [weakStartMainView removeFromSuperview];
             _startMainView = nil;
@@ -131,8 +129,6 @@
                     NSLog(@"完成后的操作");
                     [weakRestView removeFromSuperview];
                     _resetView = nil;
-                    weakSelf.infoBtn.hidden = YES;
-                    weakSelf.countBtn.hidden = YES;
                     [weakSelf.view insertSubview:weakSelf.startMainView belowSubview:weakSelf.infoBtn];
                 }
             };
@@ -149,7 +145,6 @@
     if (!_infoBtn) {
         _infoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_infoBtn setImage:[UIImage imageNamed:@"btn_info"] forState:UIControlStateNormal];
-        _infoBtn.hidden = YES;
         _infoBtn.frame = CGRectMake(15, 0, 32, 32);
         _infoBtn.bottom = APP_SCREEN_HEIGHT - 15;
         [_infoBtn addTarget:self action:@selector(infoBtnTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -163,7 +158,6 @@
 {
     if (!_countBtn) {
         _countBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _countBtn.hidden = YES;
         _countBtn.layer.cornerRadius = 11;
         _countBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         _countBtn.backgroundColor = [UIColor colorWithRed:0.87 green:0.31 blue:0.23 alpha:1];
