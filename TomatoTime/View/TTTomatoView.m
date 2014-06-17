@@ -122,10 +122,12 @@
 {
     maxMinute_ --;
     
-    [self.circleView setState:TTCircleViewStateNormal title:[NSString stringWithFormat:@"%d", maxMinute_]];
+    [self.circleView setState:TTCircleViewStateNormal title:[NSString stringWithFormat:@"%ld", maxMinute_]];
     
     if (maxMinute_ == 0) {
         [timer_ invalidate];
+        [self.progressView stopSecond];
+        
         if (self.endHandler) {
             self.endHandler();
         }
@@ -138,10 +140,10 @@
 {
     NSLog(@"很久没有点击了！");
     [UIView animateWithDuration:1 animations:^{
-        self.circleView.trackLayer.fillColor = [UIColor blackColor].CGColor;
         self.backgroundScrollView.backgroundColor = [UIColor blackColor];
         self.circleView.titleColor = [UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1];
         self.circleView.circleMode = TTCircleViewModeLine;
+        self.circleView.trackLayer.fillColor = [UIColor blackColor].CGColor;
     }];
 }
 

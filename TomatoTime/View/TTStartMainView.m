@@ -36,7 +36,9 @@
     if (!_circleView) {
         _circleView = [[TTCircleView alloc] initWithFrame:CGRectMake(0, 100, 150, 150)];
         _circleView.center = CGPointMake(self.center.x, _circleView.center.y);
-        _circleView.circleColor = [UIColor colorWithRed:0.87 green:0.32 blue:0.24 alpha:1];
+        _circleView.needHighlighted = YES;
+        [_circleView setState:TTCircleViewStateNormal color:[UIColor colorWithRed:0.87 green:0.32 blue:0.24 alpha:1]];
+        
         _circleView.titleString = @"开始";
         [_circleView addTarget:self action:@selector(startToTomato:) forControlEvents:UIControlEventTouchUpInside];
     }

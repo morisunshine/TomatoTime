@@ -19,5 +19,6 @@
 @property (nonatomic, retain) UILabel *countLabel;
 
 - (void)oneSecondAnimationsWithLeft:(BOOL)left;
+- (void)stopSecond;
 
 @end
