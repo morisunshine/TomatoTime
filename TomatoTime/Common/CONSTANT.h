@@ -14,6 +14,7 @@
 
 #define FONTSIZE(s)                 [UIFont boldSystemFontOfSize:(s)]
 #define GLOBAL_COLOR                [UIColor colorWithRed:0.41 green:0.41 blue:0.41 alpha:1]
+#define USER_DEFAULTS               [NSUserDefaults standardUserDefaults]
 
 static const NSInteger kTomatoMinute = 3;
 static const NSInteger kRestMinute = 3;

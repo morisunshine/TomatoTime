@@ -12,6 +12,10 @@
 #import "TTCircleView.h"
 #import "TTInfoViewController.h"
 
+static NSString *kFinishCount = @"finishCount";
+static NSString *kLastDay = @"lastDay";
+static NSString *kLastMonth = @"lastMonth";
+
 @interface TTMainViewController ()
 
 @property (nonatomic, retain) TTStartMainView *startMainView;
@@ -19,6 +23,7 @@
 @property (nonatomic, retain) TTTomatoView *resetView;
 @property (nonatomic, retain) UIButton *infoBtn;
 @property (nonatomic, retain) UIButton *countBtn;
+@property (nonatomic, assign) NSInteger finishCount;
 
 @end
 
@@ -50,6 +55,30 @@
 }
 
 #pragma mark - Getters -
+
+- (NSInteger)finishCount
+{
+    NSCalendar *gregorianCal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+
+    NSDateComponents *dateComps = [gregorianCal components:(NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:[NSDate date]];
+    
+    NSInteger lastFinishDay = [[USER_DEFAULTS objectForKey:kLastDay] integerValue];
+    NSInteger lastFinishMonth = [[USER_DEFAULTS objectForKey:kLastMonth] integerValue];
+    
+    NSInteger finishCount = 0;
+    
+    if (lastFinishMonth == 0 && lastFinishDay == 0) {
+        [USER_DEFAULTS setObject:@(0) forKey:kFinishCount];
+    } else {
+        if (lastFinishDay < dateComps.day && lastFinishMonth < dateComps.month) {
+            [USER_DEFAULTS setObject:@(0) forKey:kFinishCount];
+        } else {
+            [[USER_DEFAULTS objectForKey:kFinishCount] integerValue];
+        }
+    }
+    
+    return finishCount;
+}
 
 - (TTStartMainView *)startMainView
 {
@@ -130,6 +159,10 @@
                     [weakRestView removeFromSuperview];
                     _resetView = nil;
                     [weakSelf.view insertSubview:weakSelf.startMainView belowSubview:weakSelf.infoBtn];
+                    
+                    self.finishCount ++;
+                    NSString *finishCount = [NSString stringWithFormat:@"%ld", self.finishCount];
+                    [_countBtn setTitle:finishCount forState:UIControlStateNormal];
                 }
             };
             
@@ -164,10 +197,25 @@
         _countBtn.frame = CGRectMake(15, 0, 22, 22);
         _countBtn.bottom = APP_SCREEN_HEIGHT - 20;
         _countBtn.right = APP_SCREEN_WIDTH - 15;
-        [_countBtn setTitle:@"0" forState:UIControlStateNormal];
+        NSString *finishCount = [NSString stringWithFormat:@"%ld", self.finishCount];
+        [_countBtn setTitle:finishCount forState:UIControlStateNormal];
     }
     
     return _countBtn;
+}
+
+#pragma mark - Setters -
+
+- (void)setFinishCount:(NSInteger)finishCount
+{
+    NSCalendar *gregorianCal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSDateComponents *dateComps = [gregorianCal components:(NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:[NSDate date]];
+    
+    [USER_DEFAULTS setObject:@(dateComps.day) forKey:kLastDay];
+    [USER_DEFAULTS setObject:@(dateComps.month) forKey:kLastMonth];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@(finishCount) forKey:kFinishCount];
 }
 
 #pragma mark - Actions -
