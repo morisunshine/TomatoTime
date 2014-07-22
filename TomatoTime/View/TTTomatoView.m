@@ -93,7 +93,7 @@
 - (TTCircleView *)circleView
 {
     if (!_circleView) {
-        _circleView = [[TTCircleView alloc] initWithFrame:CGRectMake(0, 100, 150, 150) circleMode:TTCircleViewModeFill];
+        _circleView = [[TTCircleView alloc] initWithFrame:CGRectMake(0, 83, 150, 150) circleMode:TTCircleViewModeFill];
         _circleView.needHighlighted = YES;
         _circleView.titleColor = [UIColor whiteColor];
         _circleView.center = CGPointMake(self.center.x, _circleView.center.y);
